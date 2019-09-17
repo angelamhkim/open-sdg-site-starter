@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Indicator 5-1-1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  </head>
+  <body>
+    <div style="width: 100%">
+      <h1>Indicator 5-1-1</h1>
+      <canvas id="canvas"></canvas>
+    </div>
+  
+    <script type="text/javascript" >
+    d3.csv("indicator_5-1-1.csv").then(function(data) {
+  createLabelsArray(data);
+});
+
+var departmentsArray = [];
+var malePayroll = [];
+var femalePayroll = [];
+
+createLabelsArray = data => {
+  //Note: I had to insert "Not Specified" in the csv file because empty data is read as NaN"
+  for (let i = 0; i < data.length; i++) {
+    departmentsArray.push(data[i]["City of LA Department"]);
+  }
+  var departments = [...new Set(departmentsArray)];
+  createValuesData(data, departments);
+};
+
+createValuesData = (data, departments) => {
+  for (let i in data) {
+    if (data[i].Gender == "Male") {
+      malePayroll.push(data[i].Value);
+    } else if (data[i].Gender == "Female") {
+      femalePayroll.push(data[i].Value);
+    }
+    createChart(data, departments);
+  }
+};
+
+createChart = (data, departments) => {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: departments,
+      datasets: [
+        {
+          label: "Male",
+          backgroundColor: "#3e95cd",
+          stack: "Stack 0",
+          data: malePayroll
+        },
+        {
+          label: "Female",
+          backgroundColor: "#8e5ea2",
+          stack: "Stack 0",
+          data: femalePayroll
+        }
+      ]
+    },
+    options: {
+      tooltips: {
+        mode: "index",
+        intersect: false
+      },
+      responsive: true,
+      scales: {
+        xAxes: [
+          {
+            stacked: true
+          }
+        ],
+        yAxes: [
+          {
+            stacked: true
+          }
+        ]
+      }
+    }
+  });
+};
+    </script>
+  </body>
+</html>
