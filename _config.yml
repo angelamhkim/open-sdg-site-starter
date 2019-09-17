@@ -42,9 +42,9 @@ twitter: 'MyTwitterAccount'
 
 # Replace the email addresses below.
 email_contacts:
-  questions: test
-  suggestions: test
-  functional: test
+  questions: angelamhkim@gmail.com
+  suggestions: angelamhkim@gmail.com
+  functional: angelamhkim@gmail.com
 
 # Github Repo for Data
 # Replace this value as needed.
