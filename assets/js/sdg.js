@@ -1167,8 +1167,8 @@ var mapView = function () {
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
-      mapOptions: {"tileURL":"https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibHVjeWphbmVnd2lsbCIsImEiOiJjazAyZ2phaGMwajhzM2hxb2czZmdrZ2szIn0.tcj-n08CcU-7tKXFqB-WuQ","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a> | <a href=\"http://geoportal.statistics.gov.uk/\">ONS</a>"},"minZoom":6},
-      mapLayers: [{"min_zoom":5,"max_zoom":10,"serviceUrl":"https://geoportal1-ons.opendata.arcgis.com/datasets/4fcca2a47fed4bfaa1793015a18537ac_4.geojson","nameProperty":"rgn17nm","idProperty":"rgn17cd","staticBorders":true},{"min_zoom":6,"max_zoom":10,"serviceUrl":"https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson","nameProperty":"lad16nm","idProperty":"lad16cd","staticBorders":false}],
+      mapOptions: null,
+      mapLayers: [{"serviceUrl":"http://s3-us-west-2.amazonaws.comboundaries.latimes.com/archive/1.0/boundary-setla-city-council-districts-2012.geojson","nameProperty":"name","idProperty":"external_id","min_zoom":0,"max_zoom":20,"staticBorders":false}],
     });
   };
 };
