@@ -126,56 +126,55 @@ remote_theme: brockfanning/open-sdg@chartjs-component-cleanup
 custom_css:
   - /assets/css/custom.css
   
-
-  #Mapping
-  map_options:
+#Mapping
+map_options:
   # Control the limits on zooming in/out in the map:
-  minZoom: 5
-  maxZoom: 10
-  # If you would like to use tile (background) imagery, use these:
-  tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
-  tileOptions:
-    id: mapbox.light
-    accessToken: pk.eyJ1IjoibGluZGFtZWppYSIsImEiOiJjazE4M2J3cmcwNnk2M25wMXVwcjR1aG55In0.vJ1t8dRbljaPHrD4NuyVkg
-    attribution: <a href="https://www.mapbox.com">Mapbox</a>
-  # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
-  colorRange: chroma.brewer.BuGn
-  # Set the color for boundaries that have no data.
-  noValueColor: #f0f0f0
-  # For documentation on the style options below, see here:
-  # https://leafletjs.com/reference-1.4.0.html#path-option
-  # Set the default style for boundaries in the map:
-  styleNormal:
-    weight: 1
-    opacity: 1
-    color: #888
-    fillOpacity: 0.7
-  # Set the style for boundaries that have been selected/highlighted:
-  styleHighlighted:
-    weight: 1
-    opacity: 1
-    color: #111
-    fillOpacity: 0.7
-  # Set the style for top-level boundaries that are displaying in other layers.
-  # Note: This is only applicable when using the "nested zoom" feature (see below).
-  styleStatic:
-    weight: 2
-    opacity: 1
-    fillOpacity: 0
-    color: #172d44
-    dashArray: 5,5
+minZoom: 5
+maxZoom: 10
+# If you would like to use tile (background) imagery, use these:
+tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.pngaccess_token={accessToken}
+tileOptions:
+  id: mapbox.light
+  accessToken: pk.eyJ1IjoibGluZGFtZWppYSIsImEiOiJjazE4M2J3cmcwNnk2M25wMXVwcjR1aG5In0.vJ1t8dRbljaPHrD4NuyVkg
+  attribution: <a href="https://www.mapbox.com">Mapbox</a>
+# Control the choropleth color range. See https://gka.github.iochroma.js/#chroma-brewer
+colorRange: chroma.brewer.BuGn
+# Set the color for boundaries that have no data.
+noValueColor: #f0f0f0
+# For documentation on the style options below, see here:
+# https://leafletjs.com/reference-1.4.0.html#path-option
+# Set the default style for boundaries in the map:
+styleNormal:
+  weight: 1
+  opacity: 1
+  color: #888
+  fillOpacity: 0.7
+# Set the style for boundaries that have been selected/highlighted:
+styleHighlighted:
+  weight: 1
+  opacity: 1
+  color: #111
+  fillOpacity: 0.7
+# Set the style for top-level boundaries that are displaying inother layers.
+# Note: This is only applicable when using the "nested zoom"feature (see below).
+styleStatic:
+  weight: 2
+  opacity: 1
+  fillOpacity: 0
+  color: #172d44
+  dashArray: 5,5
     
-  map_layers:
-  -
-    # [REQUIRED] The URL to the GeoJSON file for this layer:
-    serviceUrl: http://s3-us-west-2.amazonaws.com/boundaries.latimes.com/archive/1.0/boundary-set/la-city-council-districts-2012.geojson
-    # [REQUIRED] The property in `properties` for each boundary's human-readable name
-    nameProperty: name
-    # [REQUIRED] The property in `properties` for each boundary's unique ID (GeoCode).
-    idProperty: external_id
-    # The minimum zoom at which this layer should be visible.
-    min_zoom: 0
-    # The maximum zoom at which this layer should be visible.
-    max_zoom: 20
-    # Whether or not these boundaries should display statically on lower layers.
-    staticBorders: false
+map_layers:
+-
+  # [REQUIRED] The URL to the GeoJSON file for this layer:
+  serviceUrl: http://s3-us-west-2.amazonaws.comboundaries.latimes.com/archive/1.0/boundary-setla-city-council-districts-2012.geojson
+  # [REQUIRED] The property in `properties` for each boundary'shuman-readable name
+  nameProperty: name
+  # [REQUIRED] The property in `properties` for each boundary'sunique ID (GeoCode).
+  idProperty: external_id
+  # The minimum zoom at which this layer should be visible.
+  min_zoom: 0
+  # The maximum zoom at which this layer should be visible.
+  max_zoom: 20
+  # Whether or not these boundaries should display statically onlower layers.
+  staticBorders: false
