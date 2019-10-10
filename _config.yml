@@ -92,6 +92,8 @@ menu:
     translation_key: menu.about
   - path: /faq
     translation_key: menu.faq
+  - path: /dashboard
+    translation_key: menu.dashboard
 
 
 # Configure the text (or "translation key") to be used on the
@@ -125,6 +127,11 @@ remote_theme: brockfanning/open-sdg@chartjs-component-cleanup
 # Apply any custom CSS.
 custom_css:
   - /assets/css/custom.css
+  
+# Apply any custom Javacript.
+custom_js:
+  - /assets/js/custom.js
+
   
 #Mapping
 map_options:
