@@ -11,6 +11,7 @@ layout: page
     <!-- City Average -->
     <div class="col-xs-6 col-sm-4 col-md-2">
       <p>City Average Score</p>
+      <!-- Change City Average Score Percentage "data-percent" below -->
       <div class="circle-graph" data-circle-graph data-percent="55.6">
         <div class="circle-graph-progress">
           <div class="circle-graph-progress-fill"></div>
@@ -18,7 +19,6 @@ layout: page
         <div class="circle-graph-percents">
           <div class="circle-graph-percents-wrapper">
             <span class="circle-graph-percents-number"></span>
-            <span class="circle-graph-percents-units">of 100</span>
           </div>
         </div>
       </div>
@@ -26,6 +26,7 @@ layout: page
     <!-- Reporting Status -->
     <div class="col-xs-6 col-sm-4 col-md-2">
       <p>Reporting Status</p>
+      <!-- Change Reporting Status Percentage "data-percent" below -->
       <div class="circle-graph" data-circle-graph data-percent="47">
         <div class="circle-graph-progress">
           <div class="circle-graph-progress-fill"></div>
@@ -33,7 +34,6 @@ layout: page
         <div class="circle-graph-percents">
           <div class="circle-graph-percents-wrapper">
             <span class="circle-graph-percents-number"></span>
-            <span class="circle-graph-percents-units">of 100</span>
           </div>
         </div>
       </div>
@@ -43,17 +43,8 @@ layout: page
       <div id="accordion">
         <div class="card">
           <div class="card-header" id="heading-1">
-            <h5 class="mb-0">
-              <a
-                class="collapsed"
-                role="button"
-                data-toggle="collapse"
-                href="#collapse-1"
-                aria-expanded="false"
-                aria-controls="collapse-1"
-              >
+            <h5 class="accordion-header">
                 5 Best and 5 Worst
-              </a>
             </h5>
           </div>
           <div
@@ -85,7 +76,7 @@ layout: page
                     data-parent="#accordion-1"
                     aria-labelledby="heading-1-1"
                   >
-                    <div class="card-body">
+                    <div class="card-body primary">
                       Sick Leave Policy
                     </div>
                     <div class="card-body">
@@ -102,6 +93,7 @@ layout: page
                     </div>
                   </div>
                 </div>
+                <hr/>
                 <div class="card">
                   <div class="card-header" id="heading-1-2">
                     <h5 class="mb-0">
