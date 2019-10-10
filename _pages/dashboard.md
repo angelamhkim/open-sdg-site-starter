@@ -161,7 +161,7 @@ layout: page
       <span>
         <img
           style="height:100px; width:100px; float:left"
-          src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-01-1024x1024.png"
+         alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-01-1024x1024.png"
         />
         <h3>20.4%</h3>
         <p>Below National Poverty Level</p>
@@ -172,7 +172,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-02-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-02-1024x1024.png"
       />
       <div style="float:right">
         <h3>29.2%</h3>
@@ -183,7 +183,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-03-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-03-1024x1024.png"
       />
       <div style="float:right">
         <h3>##%</h3>
@@ -196,7 +196,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-04-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-04-1024x1024.png"
       />
       <div style="float:right">
         <h3>49%</h3>
@@ -207,7 +207,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-05-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-05-1024x1024.png"
       />
       <div style="float:right">
         <h3>42.9%</h3>
@@ -221,7 +221,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-06-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-06-1024x1024.png"
       />
       <div style="float:right">
         <h3>##%</h3>
@@ -234,7 +234,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-07-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-07-1024x1024.png"
       />
       <div style="float:right">
         <h3>0.34mJ/GDP</h3>
@@ -247,7 +247,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-08-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-08-1024x1024.png"
       />
       <div style="float:right">
         <h3>4.75%</h3>
@@ -262,7 +262,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-09-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-09-1024x1024.png"
       />
       <div style="float:right">
         <h3>##</h3>
@@ -275,7 +275,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-10-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-10-1024x1024.png"
       />
       <div style="float:right">
         <h3>##%</h3>
@@ -286,7 +286,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-11-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-11-1024x1024.png"
       />
       <div style="float:right">
         <h3>52,800</h3>
@@ -305,7 +305,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-15-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-15-1024x1024.png"
       />
       <div style="float:right">
         <h3>##%</h3>
@@ -316,7 +316,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-16-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-16-1024x1024.png"
       />
       <div style="float:right">
         <h3>259</h3>
@@ -329,7 +329,7 @@ layout: page
       <img
         style="height:100px; width:100px; float:left"
         style="height:100px; width:100px"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-17-1024x1024.png"
+       alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-17-1024x1024.png"
       />
       <div style="float:right">
         <h3>78.8%</h3>
