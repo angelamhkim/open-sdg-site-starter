@@ -1,23 +1,6 @@
 ---
 # Enter any custom Sass in this file.
 ---
-.heading h4 {
-  color: white;
-  a {
-    display: inline; 
-    color: yellow; 
-    text-decoration: underline;
-  }
-}
-
-#main-content.goal-indicators .indicator-cards a {
-  padding: 0;
-  margin-bottom: 1.5rem;
-}
-#main-content.goal-indicators .indicator-cards.target {
-  margin-bottom: 1.5rem;
-  clear: left;
-}
 
 // DASHBOARD start circle-graph
 .circle-graph {
@@ -75,7 +58,7 @@
   top: calc(50% - 7.75862rem/2);
   width: 7.75862rem;
   height: 7.75862rem;
-  background: #e6e6e6;
+  background: white;
   text-align: center;
   display: table;
   z-index: 4;
@@ -106,6 +89,14 @@
 // DASHBOARD end circle-graph
 
 //DASHBOARD accordion
+.accordion-header{
+background:#1779ba;
+color:rgb(241, 241, 241);
+font-weight:bold;
+font-size:17px;
+padding:5px;
+text-align: center;
+}
 .mb-0 > a {
   display: block;
   position: relative;
@@ -119,6 +110,13 @@
 .mb-0 > a[aria-expanded="true"]:after {
   content: "\f077"; /* fa-chevron-up */
 }
+
+.card-body{
+  border:1px solid lightgrey;
+  text-align:center;
+  padding:10px;
+}
+
 //DASHBOARD Accordion End
 
 
