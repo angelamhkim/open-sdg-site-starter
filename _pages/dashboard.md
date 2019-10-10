@@ -26,7 +26,7 @@ layout: page
     <!-- Reporting Status -->
     <div class="col-xs-6 col-sm-4 col-md-2">
       <p>Reporting Status</p>
-      <div class="circle-graph" data-circle-graph data-percent="55.6">
+      <div class="circle-graph" data-circle-graph data-percent="47">
         <div class="circle-graph-progress">
           <div class="circle-graph-progress-fill"></div>
         </div>
