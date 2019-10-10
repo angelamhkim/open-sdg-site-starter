@@ -109,7 +109,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191010214011">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191010220535">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -117,7 +117,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191010214011"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191010220535"></head>
 <body class="language-en">
 <!-- <div class="container"> -->
 
@@ -186,6 +186,7 @@ var translations = {
     <!-- City Average -->
     <div class="col-xs-6 col-sm-4 col-md-2">
       <p>City Average Score</p>
+      <!-- Change City Average Score Percentage "data-percent" below -->
       <div class="circle-graph" data-circle-graph="" data-percent="55.6">
         <div class="circle-graph-progress">
           <div class="circle-graph-progress-fill"></div>
@@ -193,7 +194,6 @@ var translations = {
         <div class="circle-graph-percents">
           <div class="circle-graph-percents-wrapper">
             <span class="circle-graph-percents-number"></span>
-            <span class="circle-graph-percents-units">of 100</span>
           </div>
         </div>
       </div>
@@ -201,6 +201,7 @@ var translations = {
     <!-- Reporting Status -->
     <div class="col-xs-6 col-sm-4 col-md-2">
       <p>Reporting Status</p>
+      <!-- Change Reporting Status Percentage "data-percent" below -->
       <div class="circle-graph" data-circle-graph="" data-percent="47">
         <div class="circle-graph-progress">
           <div class="circle-graph-progress-fill"></div>
@@ -208,7 +209,6 @@ var translations = {
         <div class="circle-graph-percents">
           <div class="circle-graph-percents-wrapper">
             <span class="circle-graph-percents-number"></span>
-            <span class="circle-graph-percents-units">of 100</span>
           </div>
         </div>
       </div>
@@ -218,10 +218,8 @@ var translations = {
       <div id="accordion">
         <div class="card">
           <div class="card-header" id="heading-1">
-            <h5 class="mb-0">
-              <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            <h5 class="accordion-header">
                 5 Best and 5 Worst
-              </a>
             </h5>
           </div>
           <div id="collapse-1" class="collapse show" data-parent="#accordion" aria-labelledby="heading-1">
@@ -236,7 +234,7 @@ var translations = {
                     </h5>
                   </div>
                   <div id="collapse-1-1" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-1">
-                    <div class="card-body">
+                    <div class="card-body primary">
                       Sick Leave Policy
                     </div>
                     <div class="card-body">
@@ -253,6 +251,7 @@ var translations = {
                     </div>
                   </div>
                 </div>
+                <hr />
                 <div class="card">
                   <div class="card-header" id="heading-1-2">
                     <h5 class="mb-0">
@@ -471,7 +470,7 @@ var translations = {
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191010214011'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191010220535'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

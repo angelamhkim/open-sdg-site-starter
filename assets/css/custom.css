@@ -1,18 +1,3 @@
-.heading h4 {
-  color: white; }
-  .heading h4 a {
-    display: inline;
-    color: yellow;
-    text-decoration: underline; }
-
-#main-content.goal-indicators .indicator-cards a {
-  padding: 0;
-  margin-bottom: 1.5rem; }
-
-#main-content.goal-indicators .indicator-cards.target {
-  margin-bottom: 1.5rem;
-  clear: left; }
-
 .circle-graph {
   width: 11.25rem;
   height: 11.25rem;
@@ -60,7 +45,7 @@
   top: calc(50% - 7.75862rem/2);
   width: 7.75862rem;
   height: 7.75862rem;
-  background: #e6e6e6;
+  background: white;
   text-align: center;
   display: table;
   z-index: 4; }
@@ -84,6 +69,14 @@
 .circle-graph-percents-wrapper span {
   line-height: 1; }
 
+.accordion-header {
+  background: #1779ba;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 5px;
+  text-align: center; }
+
 .mb-0 > a {
   display: block;
   position: relative; }
@@ -98,6 +91,11 @@
 .mb-0 > a[aria-expanded="true"]:after {
   content: "\f077";
   /* fa-chevron-up */ }
+
+.card-body {
+  border: 1px solid lightgrey;
+  text-align: center;
+  padding: 10px; }
 
 .chartImage {
   height: 300px;
