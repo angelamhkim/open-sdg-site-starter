@@ -109,7 +109,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191011001814">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191011002404">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -117,7 +117,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191011001814"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191011002404"></head>
 <body class="language-en">
 <!-- <div class="container"> -->
 
@@ -219,7 +219,7 @@ var translations = {
         <div class="card">
           <div class="card-header" id="heading-1">
             <h5 class="accordion-header">
-                5 Best and 5 Worst
+              5 Best and 5 Worst
             </h5>
           </div>
           <div id="collapse-1" class="collapse show" data-parent="#accordion" aria-labelledby="heading-1">
@@ -286,45 +286,51 @@ var translations = {
     </div>
     <!-- Chart -->
     <div class="col-xs-12 col-md-4">
-      <img src="/open-sdg-site-starter/assets/img/Chart.png" alt="Chart of LA SDG" class="chartImage" />
+      <img src="/open-sdg-site-starter/assets/img/Chart.png" style="display:inline-block; vertical-align:top;" alt="Chart of LA SDG" class="chartImage" />
     </div>
   </div>
   <!-- Progress Bars and Percentage Data For Each SDG -->
   <div class="row justify-content-center">
-    <div class="col-xs-4 col-md-2">
-      <span>
-        <img style="height:100px; width:100px; float:left" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-01-1024x1024.png" />
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-01-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#E5243B" />
         <h3>20.4%</h3>
         <p>Below National Poverty Level</p>
-      </span>
+      </div>
     </div>
-    <br />
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-02-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-02-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#DDA63A" />
         <h3>29.2%</h3>
         <p>Food Insecure</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-03-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-03-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#4C9F38" />
         <h3>##%</h3>
         <p>Under 5 Mortality Rate</p>
         <h3>##%</h3>
         <p>Diabetes Mortality Rate</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-04-1024x1024.png" />
-      <div style="float:right">
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-04-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#C5192D" />
         <h3>49%</h3>
         <p>Students in 11th Grade not meeting Smarter Balance standards</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-05-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-05-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#FF3A21" />
         <h3>42.9%</h3>
         <p>
           Of total civilian population employed in Management Occupations who
@@ -332,27 +338,32 @@ var translations = {
         </p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-06-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-06-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#26BDE2" />
         <h3>##%</h3>
         <p>Wastewater safely treated</p>
         <h3>##%</h3>
         <p>Level of water stress</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-07-1024x1024.png" />
-      <div style="float:right">
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-07-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#FCC30B" />
         <h3>0.34mJ/GDP</h3>
         <p>Energy Intensity</p>
         <h3>30%</h3>
         <p>population with primary reliance on clean fuels and technology</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-08-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-08-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#A21942" />
         <h3>4.75%</h3>
         <p>GDP Growth Rate</p>
         <h3>4.7%</h3>
@@ -361,25 +372,31 @@ var translations = {
         <p>Disconnected Youth</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-09-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-09-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#FD6925" />
         <h3>##</h3>
         <p>Passenger and Freight Volume</p>
         <h3>8.35%%</h3>
         <p>Employment in Manufacturing</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-10-1024x1024.png" />
-      <div style="float:right">
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-10-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#DD1367" />
         <h3>##%</h3>
         <p>Growth in Household expenditure for bottom 40% of population</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-11-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-11-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#FD9D24" />
         <h3>52,800</h3>
         <p>Popualtion in informal settlements</p>
         <h3>##%</h3>
@@ -392,45 +409,50 @@ var translations = {
         <p>Open Space</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-15-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-15-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#56C02B" />
         <h3>##%</h3>
         <p>Forest Area</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-16-1024x1024.png" />
-      <div style="float:right">
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-16-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#00689D" />
         <h3>259</h3>
         <p>Homicide Victims</p>
         <h3>29,100</h3>
         <p>Population Victims of Violence</p>
       </div>
     </div>
-    <div class="col-xs-4 col-md-2">
-      <img style="height:100px; width:100px" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons_WEB-17-1024x1024.png" />
-      <div style="float:right">
+    <div class="col-xs-12 col-md-4" style="display:inline-block;">
+      <img style="height:100px; width:100px; vertical-align:top;" alt="goal" src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-17-1024x1024.png" />
+      <div class="text-percentages">
+        <hr class="slash-1" style="color:#19486A" />
         <h3>78.8%</h3>
         <p>with Broadband Connection</p>
       </div>
     </div>
   </div>
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
-  $("[data-circle-graph]").each(function() {
-  var $graph = $(this),
-    percent = parseInt($graph.data("percent"), 10),
-    deg = (360 * percent) / 100;
-  if (percent > 50) {
-    $graph.addClass("gt-50");
-  }
-  $graph
-    .find(".circle-graph-progress-fill")
-    .css("transform", "rotate(" + deg + "deg)");
-  $graph.find(".circle-graph-percents-number").html(percent + "%");
-});</script>
+    $("[data-circle-graph]").each(function() {
+      var $graph = $(this),
+        percent = parseInt($graph.data("percent"), 10),
+        deg = (360 * percent) / 100;
+      if (percent > 50) {
+        $graph.addClass("gt-50");
+      }
+      $graph
+        .find(".circle-graph-progress-fill")
+        .css("transform", "rotate(" + deg + "deg)");
+      $graph.find(".circle-graph-percents-number").html(percent + "%");
+    });
+  </script>
 </div>
 
     </div>
@@ -470,7 +492,7 @@ var translations = {
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191011001814'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191011002404'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
