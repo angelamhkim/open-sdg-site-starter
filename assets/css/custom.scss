@@ -97,6 +97,13 @@ font-size:17px;
 padding:5px;
 text-align: center;
 }
+
+#accordion-1{
+  text-align:center;
+  border:0.5px solid lightgrey;
+  padding:10px;
+}
+
 .mb-0 > a {
   display: block;
   position: relative;
@@ -110,11 +117,10 @@ text-align: center;
 .mb-0 > a[aria-expanded="true"]:after {
   content: "\f077"; /* fa-chevron-up */
 }
-
 .card-body{
-  border:1px solid lightgrey;
-  text-align:center;
-  padding:10px;
+  background-color:#e8f4fc;
+  padding:5px;
+  color:#646464;
 }
 
 //DASHBOARD Accordion End
