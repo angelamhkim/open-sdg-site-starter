@@ -9,37 +9,15 @@ layout: page
 <div class="container-fluid">
   <div class="row justify-content-center">
     <!-- City Average -->
-    <div class="col-xs-6 col-sm-4 col-md-2">
-      <h4>City Average Score</h4>
-      <!-- Change City Average Score Percentage "data-percent" below -->
-      <div class="circle-graph" data-circle-graph data-percent="55.6">
-        <div class="circle-graph-progress">
-          <div class="circle-graph-progress-fill"></div>
-        </div>
-        <div class="circle-graph-percents">
-          <div class="circle-graph-percents-wrapper">
-            <span class="circle-graph-percents-number"></span>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-4">
+      <canvas id="doughnut-chart" width="800" height="450"></canvas>
     </div>
-    <!-- Reporting Status -->
-    <div class="col-xs-6 col-sm-4 col-md-2" style="margin-bottom:40px;">
-      <h4>Reporting Status</h4>
-      <!-- Change Reporting Status Percentage "data-percent" below -->
-      <div class="circle-graph" data-circle-graph data-percent="47">
-        <div class="circle-graph-progress">
-          <div class="circle-graph-progress-fill"></div>
-        </div>
-        <div class="circle-graph-percents">
-          <div class="circle-graph-percents-wrapper">
-            <span class="circle-graph-percents-number"></span>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-4">
+      <!-- Reporting Status -->
+      <canvas id="doughnut-chart2" width="800" height="450"></canvas>
     </div>
     <!-- 5 Best and 5 Worst -->
-    <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="col-xs-12 col-md-4">
       <div id="accordion">
         <div class="card">
           <div class="card-header" id="heading-1">
@@ -55,108 +33,109 @@ layout: page
             style="margin-bottom:40px;"
           >
             <!-- <div class="card-body"> -->
-              <div id="accordion-1">
-                <div class="card">
-                  <div class="card-header" id="heading-1-1">
-                    <h5 class="mb-0">
-                      <a
-                        class="collapsed"
-                        role="button"
-                        data-toggle="collapse"
-                        href="#collapse-1-1"
-                        aria-expanded="false"
-                        aria-controls="collapse-1-1"
-                      >
-                        Best
-                      </a>
-                    </h5>
-                  </div>
-                  <div
-                    id="collapse-1-1"
-                    class="collapse"
-                    data-parent="#accordion-1"
-                    aria-labelledby="heading-1-1"
-                  >
-                    <div class="card-body">
-                      Sick Leave Policy
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Climate Alliance Membership
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Family Leave Policy
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      SO2 Emissions
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Smoking Rate
-                    </div>
-                  </div>
+            <div id="accordion-1">
+              <div class="card">
+                <div class="card-header" id="heading-1-1">
+                  <h5 class="mb-0">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      href="#collapse-1-1"
+                      aria-expanded="false"
+                      aria-controls="collapse-1-1"
+                    >
+                      Best
+                    </a>
+                  </h5>
                 </div>
-                <hr />
-                <div class="card">
-                  <div class="card-header" id="heading-1-2">
-                    <h5 class="mb-0">
-                      <a
-                        class="collapsed"
-                        role="button"
-                        data-toggle="collapse"
-                        href="#collapse-1-2"
-                        aria-expanded="false"
-                        aria-controls="collapse-1-2"
-                      >
-                        Worst
-                      </a>
-                    </h5>
+                <div
+                  id="collapse-1-1"
+                  class="collapse"
+                  data-parent="#accordion-1"
+                  aria-labelledby="heading-1-1"
+                >
+                  <div class="card-body">
+                    Sick Leave Policy
                   </div>
-                  <div
-                    id="collapse-1-2"
-                    class="collapse"
-                    data-parent="#accordion-1"
-                    aria-labelledby="heading-1-2"
-                  >
-                    <div class="card-body">
-                      Affordable Housing
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Overcrowded Housing
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Banking Access
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Rural Infastracture Index
-                    </div>
-                    <hr style="margin:0"/>
-                    <div class="card-body">
-                      Non-carbon Ecological Fooprint
-                    </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Climate Alliance Membership
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Family Leave Policy
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    SO2 Emissions
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Smoking Rate
                   </div>
                 </div>
               </div>
+              <hr />
+              <div class="card">
+                <div class="card-header" id="heading-1-2">
+                  <h5 class="mb-0">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      href="#collapse-1-2"
+                      aria-expanded="false"
+                      aria-controls="collapse-1-2"
+                    >
+                      Worst
+                    </a>
+                  </h5>
+                </div>
+                <div
+                  id="collapse-1-2"
+                  class="collapse"
+                  data-parent="#accordion-1"
+                  aria-labelledby="heading-1-2"
+                >
+                  <div class="card-body">
+                    Affordable Housing
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Overcrowded Housing
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Banking Access
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Rural Infastracture Index
+                  </div>
+                  <hr style="margin:0" />
+                  <div class="card-body">
+                    Non-carbon Ecological Fooprint
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- </div> -->
           </div>
         </div>
       </div>
     </div>
-    <!-- Chart -->
-    <div class="col-xs-12 col-md-4">
-      <img
-        src="/open-sdg-site-starter/assets/img/Chart.png"
-        style="display:inline-block; vertical-align:top; margin-bottom:40px"
-        alt="Chart of LA SDG"
-        class="chartImage"
-      />
-    </div>
   </div>
+  <!-- Chart -->
+  <div class="col-xs-12 col-md-4">
+    <img
+      src="/open-sdg-site-starter/assets/img/Chart.png"
+      style="display:inline-block; vertical-align:top; margin-bottom:40px"
+      alt="Chart of LA SDG"
+      class="chartImage"
+    />
+  </div>
+
   <!-- Progress Bars and Percentage Data For Each SDG -->
   <div class="row justify-content-center">
     <div class="col-xs-12 col-md-4" style="display:inline-block;">
@@ -193,7 +172,7 @@ layout: page
         <hr class="slash-1" style="color:#4C9F38" />
         <span style="font-size:20px; color:#4C9F38">##%</span>
         <span>Under 5 Mortality Rate</span>
-        <br/>
+        <br />
         <span style="font-size:20px; color:#4C9F38">##%</span>
         <span>Diabetes Mortality Rate</span>
       </div>
@@ -209,7 +188,9 @@ layout: page
       <div class="text-percentages">
         <hr class="slash-1" style="color:#C5192D" />
         <span style="font-size:20px; color:#C5192D">49%</span>
-        <span>Students in 11th Grade not meeting Smarter Balance standards</span>
+        <span
+          >Students in 11th Grade not meeting Smarter Balance standards</span
+        >
       </div>
     </div>
     <div class="col-xs-12 col-md-4" style="display:inline-block;">
@@ -237,7 +218,7 @@ layout: page
         <hr class="slash-1" style="color:#26BDE2" />
         <span style="font-size:20px; color:#26BDE2">##%</span>
         <span>Wastewater safely treated</span>
-         <br/>
+        <br />
         <span style="font-size:20px; color:#26BDE2">##%</span>
         <span>Level of water stress</span>
       </div>
@@ -254,9 +235,11 @@ layout: page
         <hr class="slash-1" style="color:#FCC30B" />
         <span style="font-size:20px; color:#FCC30B">0.34mJ/GDP</span>
         <span>Energy Intensity</span>
-         <br/>
+        <br />
         <span style="font-size:20px; color:#FCC30B">30%</span>
-        <span>population with primary reliance on clean fuels and technology</span>
+        <span
+          >population with primary reliance on clean fuels and technology</span
+        >
       </div>
     </div>
     <div class="col-xs-12 col-md-4" style="display:inline-block;">
@@ -269,10 +252,10 @@ layout: page
         <hr class="slash-1" style="color:#A21942" />
         <span style="font-size:20px; color:#A21942">4.75%</span>
         <span>GDP Growth Rate</span>
-         <br/>
+        <br />
         <span style="font-size:20px; color:#A21942">4.7%</span>
         <span>Umemployed Rate</span>
-         <br/>
+        <br />
         <span style="font-size:20px; color:#A21942">14%</span>
         <span>Disconnected Youth</span>
       </div>
@@ -287,7 +270,7 @@ layout: page
         <hr class="slash-1" style="color:#FD6925" />
         <span style="font-size:20px; color:#FD6925">##</span>
         <span>Passenger and Freight Volume</span>
-         <br/>
+        <br />
         <span style="font-size:20px; color:#FD6925">8.35%</span>
         <span>Employment in Manufacturing</span>
       </div>
@@ -304,7 +287,9 @@ layout: page
       <div class="text-percentages">
         <hr class="slash-1" style="color:#DD1367" />
         <span style="font-size:20px; color:#DD1367">##%</span>
-        <span>Growth in Household expenditure for bottom 40% of population</span>
+        <span
+          >Growth in Household expenditure for bottom 40% of population</span
+        >
       </div>
     </div>
     <div class="col-xs-12 col-md-4" style="display:inline-block;">
@@ -316,21 +301,21 @@ layout: page
       <div class="text-percentages">
         <hr class="slash-1" style="color:#FD9D24" />
         <div class="col-6">
-        <span style="font-size:20px; color:#FD9D24">52,800</span>
-        <span>Popualtion in informal settlements</span>
-         <br/>
-        <span style="font-size:20px; color:#FD9D24">##%</span>
-        <span>Land Consumption Rate</span>
-         <br/>
-        <span style="font-size:20px; color:#FD9D24">##%</span>
-        <span>Participation in Planning</span>
+          <span style="font-size:20px; color:#FD9D24">52,800</span>
+          <span>Popualtion in informal settlements</span>
+          <br />
+          <span style="font-size:20px; color:#FD9D24">##%</span>
+          <span>Land Consumption Rate</span>
+          <br />
+          <span style="font-size:20px; color:#FD9D24">##%</span>
+          <span>Participation in Planning</span>
         </div>
         <div class="col-6">
-        <span style="font-size:20px; color:#FD9D24">11.3</span>
-        <span>PM2.5 levels</span>
-         <br/>
-        <span style="font-size:20px; color:#FD9D24">13.5%</span>
-        <span>Open Space</span>
+          <span style="font-size:20px; color:#FD9D24">11.3</span>
+          <span>PM2.5 levels</span>
+          <br />
+          <span style="font-size:20px; color:#FD9D24">13.5%</span>
+          <span>Open Space</span>
         </div>
       </div>
     </div>
@@ -358,7 +343,7 @@ layout: page
         <hr class="slash-1" style="color:#00689D" />
         <span style="font-size:20px; color:#00689D">259</span>
         <span>Homicide Victims</span>
-         <br/>
+        <br />
         <span style="font-size:20px; color:#00689D">29,100</span>
         <span>Population Victims of Violence</span>
       </div>
@@ -376,19 +361,78 @@ layout: page
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
-    $("[data-circle-graph]").each(function() {
-      var $graph = $(this),
-        percent = parseInt($graph.data("percent"), 10),
-        deg = (360 * percent) / 100;
-      if (percent > 50) {
-        $graph.addClass("gt-50");
+    new Chart(document.getElementById("doughnut-chart"), {
+      type: "doughnut",
+      data: {
+        labels: ["City Average Score", "Other Cities"],
+        datasets: [
+          {
+            label: "City Average Score",
+            backgroundColor: ["#26BDE2", "#C0C0C0"],
+            data: [0.55, 0.45]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "City Average Score"
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              var dataset = data.datasets[tooltipItem.datasetIndex];
+              var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+              var total = meta.total;
+              var currentValue = dataset.data[tooltipItem.index];
+              var percentage = parseFloat(
+                ((currentValue / total) * 100).toFixed(1)
+              );
+              return currentValue + " (" + percentage + "%)";
+            },
+            title: function(tooltipItem, data) {
+              return data.labels[tooltipItem[0].index];
+            }
+          }
+        }
       }
-      $graph
-        .find(".circle-graph-progress-fill")
-        .css("transform", "rotate(" + deg + "deg)");
-      $graph.find(".circle-graph-percents-number").html(percent + "%");
+    });
+    new Chart(document.getElementById("doughnut-chart2"), {
+      type: "doughnut",
+      data: {
+        labels: ["Reported online", "Exploring Data Sources"],
+        datasets: [
+          {
+            label: "Reporting Status",
+            backgroundColor: ["#5cb85c", "#E27874"],
+            data: [0.47, 0.53]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Reporting Status"
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              var dataset = data.datasets[tooltipItem.datasetIndex];
+              var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+              var total = meta.total;
+              var currentValue = dataset.data[tooltipItem.index];
+              var percentage = parseFloat(
+                ((currentValue / total) * 100).toFixed(1)
+              );
+              return currentValue + " (" + percentage + "%)";
+            },
+            title: function(tooltipItem, data) {
+              return data.labels[tooltipItem[0].index];
+            }
+          }
+        }
+      }
     });
   </script>
 </div>
