@@ -442,8 +442,8 @@ layout: page
     });
     // -------------------End Doughnut Charts------------------
     // -------------------Start Spider Plot------------------
-    var width = 750,
-      height = 750,
+    var width = 500,
+      height = 500,
       radius = Math.min(width, height) / 2,
       innerRadius = 0.35 * radius;
     var pie = d3.layout
