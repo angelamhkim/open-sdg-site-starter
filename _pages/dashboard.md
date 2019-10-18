@@ -501,7 +501,7 @@ layout: page
             return d.data.color;
           })
           .attr("class", "solidArc")
-          .attr("stroke", "gray")
+          .attr("stroke", "#D3D3D3")
           .attr("d", arc)
           .on("mouseover", tip.show)
           .on("mouseout", tip.hide);
