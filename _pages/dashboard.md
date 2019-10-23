@@ -217,96 +217,105 @@ layout: page
             </div>
         </div>
     </div>
-    <div class="row justify-content-center" style="margin-top:50px">
+    <div class="row justify-content-center" style="margin-top:40px">
+   <div className="dashboard-menu">
+        <p><span style="color:red; font-weight:bold; font-size:40px">&#9679;</span>More than 50%
+            worse</p>
+        <p><span style="color:yellow;font-weight:bold; font-size:40px">&#9679;</span>More than 50%
+            has Changed</p>
+        <p><span style="color:green; font-weight:bold; font-size:40px">&#9679;</span>More than
+            50% is better</p>
+        <p><span style="color:grey; font-weight:bold; font-size:40px">&#9679;</span>Exploring Data Sources</p>
+</div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG1: No Poverty</h4>
-            <p>1.2.1 percent below national poverty level</p>
-            <p>1.4.1 access to basic services</p>
+            <p>1.2.1 percent below national poverty level<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>1.4.1 access to basic services<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG2: Zero Hunger</h4>
-            <p>2.1.2 Food Insecurity</p>
+            <p>2.1.2 Food Insecurity<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG3: Good Health and Well Being</h4>
-            <p>3.2.1 Under-Five Mortality Rate</p>
-            <p>3.4.1 Cardiovascular Disease Mortality</p>
-            <p>3.6.1 Traffic Deaths</p>
+            <p>3.2.1 Under-Five Mortality Rate<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>3.4.1 Cardiovascular Disease Mortality<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>3.6.1 Traffic Deaths<span style="color:red; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG4: Quality Education</h4>
-            <p>4.1.1 School Reading and Math Proficiency</p>
-            <p>4.2.2 Preschool Enrollment</p>
-            <p>4.5.1 Gender Parity in Education</p>
+            <p>4.1.1 School Reading and Math Proficiency <span style="color:yellow;font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>4.2.2 Preschool Enrollment<span style="color:yellow;font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>4.5.1 Gender Parity in Education<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG5: Gender Equality</h4>
-            <p>5.2.1 Violence by Intimate Partner</p>
-            <p>5.5.1 Women in Government</p>
-            <p>5.5.2 Women in Managerial Positions</p>
+            <p>5.2.1 Violence by Intimate Partner<span style="color:yellow;font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>5.5.1 Women in Government<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>5.5.2 Women in Managerial Positions<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG6: Clean Water and Sanitation</h4>
-            <p>6.1.1 Access to Drinking Water</p>
-            <p>6.2.1 Access to Sanitation Services</p>
-            <p>6.3.1 Percentage of Wastewater Treated</p>
-            <p>6.4.1 Water Use Efficiency</p>
-            <p>6.4.2 Level of Water Stress</p>
+            <p>6.1.1 Access to Drinking Water<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>6.2.1 Access to Sanitation Services<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>6.3.1 Percentage of Wastewater Treated<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>6.4.1 Water Use Efficiency<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>6.4.2 Level of Water Stress<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG7: Affordable and Clean Energy</h4>
-            <p>7.1.1 Access to Electricity</p>
-            <p>7.2.1 Renewable Energy in Final Energy Consumption</p>
+            <p>7.1.1 Access to Electricity<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>7.2.1 Renewable Energy in Final Energy Consumption<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG8: Decent Work and Economic Growth</h4>
-            <p>8.1.1 GDP growth per capita</p>
-            <p>8.2.1 GDP growth per employed person</p>
-            <p>8.5.2 Unemployed Rate</p>
-            <p>8.6.1 Disengaged Youth</p>
+            <p>8.1.1 GDP growth per capita<span style="color:yellow;font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>8.2.1 GDP growth per employed person<span style="color:yellow;font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>8.5.2 Unemployed Rate<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>8.6.1 Disengaged Youth<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">
                 SDG9: Industry, Innovation and Infrastructure
             </h4>
-            <p>9.4.1 GHG Efficiency</p>
-            <p>9.c.1 Access to Mobile Network</p>
+            <p>9.4.1 GHG Efficiency<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>9.c.1 Access to Mobile Network<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG10: Reduced Inequalities</h4>
-            <p>10.1.1 Population Below 50% of Median Income</p>
-            <p>10.3.1 Experience Discrimination</p>
+            <p>10.1.1 Population Below 50% of Median Income<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>10.3.1 Experience Discrimination<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG11: Sustainable Cities and Communities</h4>
-            <p>11.1.1 People in Informal Settlements</p>
-            <p>11.2.1 Access to Public Transportation</p>
-            <p>11.3.2 Participation Structure in Government</p>
-            <p>11.5.1 Deaths Due to Disaster</p>
-            <p>11.6.1 Solid Waste Collected</p>
-            <p>11.6.2 Particulate Matter</p>
-            <p>11.7.1 Public Open Space</p>
-            <p>11.7.2 Physical/ Sexual Violence</p>
+            <p>11.1.1 People in Informal Settlements<span style="color:red; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.2.1 Access to Public Transportation<span style="color:red; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.3.2 Participation Structure in Government<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.5.1 Deaths Due to Disaster<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.6.1 Solid Waste Collected<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.6.2 Particulate Matter<span style="color:yellow;font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.7.1 Public Open Space<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
+            <p>11.7.2 Physical/ Sexual Violence<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">
                 SDG12: Sustainable Consumption and Production
             </h4>
-            <p>12.5.1 Recylcing Rate</p>
+            <p>12.5.1 Recylcing Rate<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG15: Life on Land</h4>
-            <p>15.1.1 Forest Area</p>
+            <p>15.1.1 Forest Area<span style="color:grey; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">
                 SDG16: Peace, Justice, and Strong Instituations
             </h4>
-            <p>16.1.1 Intentional Homicide</p>
+            <p>16.1.1 Intentional Homicide<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
         <div class="col-xs-12 col-md-4">
             <h4 style="color:#26BDE2">SDG17: Partnerships for the Goals</h4>
-            <p>17.6.2 Access to Broadband</p>
+            <p>17.6.2 Access to Broadband<span style="color:green; font-weight:bold; font-size:25px">&#9679;</span></p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
