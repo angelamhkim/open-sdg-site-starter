@@ -6,39 +6,6 @@
   margin-bottom: 1.5rem;
   clear: left; }
 
-.accordion-header {
-  background: #1779ba;
-  color: #f1f1f1;
-  font-weight: bold;
-  font-size: 17px;
-  padding: 5px;
-  text-align: center; }
-
-#accordion-1 {
-  text-align: center;
-  border: 0.5px solid lightgrey;
-  padding: 10px; }
-
-.mb-0 > a {
-  display: block;
-  position: relative; }
-
-.mb-0 > a:after {
-  content: "\f078";
-  /* fa-chevron-down */
-  font-family: 'FontAwesome';
-  position: absolute;
-  right: 0; }
-
-.mb-0 > a[aria-expanded="true"]:after {
-  content: "\f077";
-  /* fa-chevron-up */ }
-
-.card-body {
-  background-color: #e8f4fc;
-  padding: 5px;
-  color: #646464; }
-
 .chartImage {
   height: 300px;
   width: auto; }
@@ -57,7 +24,9 @@
   width: 70%; }
 
 #spiderPlot {
-  font: 10px sans-serif; }
+  font: 10px sans-serif;
+  background: transparent url(https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/03/global-goals.png) no-repeat center;
+  background-size: 179px; }
 
 .axis path,
 .axis line {
@@ -81,6 +50,7 @@
   display: none; }
 
 .aster-score {
+  z-index: 1;
   line-height: 1;
   font-weight: bold;
   font-size: 200%; }
