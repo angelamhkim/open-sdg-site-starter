@@ -702,7 +702,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
             <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -824,26 +824,6 @@
                     spiderPlot(dataArray, backgroundColorArray, labels);
                 };
 
-                Chart.helpers.merge(Chart.defaults.global, {
-                    maintainAspectRatio: false,
-                    layout: {
-                        padding: 16
-                    },
-                    elements: {
-                        line: {
-                            fill: false
-                        },
-                        point: {
-                            hoverRadius: 7,
-                            radius: 5
-                        }
-                    },
-                    plugins: {
-                        legend: false,
-                        title: true
-                    }
-                });
-
                 spiderPlot = (data, backgroundColorArray, labels) => {
                     new Chart(document.getElementById("spiderPlot"), {
                         type: "polarArea",
@@ -857,26 +837,6 @@
                             ]
                         },
                         options: {
-                            plugins: {
-                                datalabels: {
-                                    anchor: "end",
-                                    // backgroundColor: function(context) {
-                                    //   return context.dataset.backgroundColor;
-                                    // },
-                                    // borderColor: "white",
-                                    // borderRadius: 25,
-                                    // borderWidth: 2,
-                                    color: "black",
-                                    font: {
-                                        weight: "bold"
-                                    },
-                                    formatter: function (value, ctx) {
-                                        var index = ctx.dataIndex;
-                                        var label = ctx.chart.data.labels[index];
-                                        return label + '\n';
-                                    }
-                                }
-                            },
                             tooltips: {
                                 callbacks: {
                                     label: function (tooltipItem, data) {
@@ -890,11 +850,17 @@
                                 ticks: {
                                     min: -200,
                                     max: 100,
+                                    callback: function (value, index, values) {
+                                        console.log(values)
+                                        for (let i = 0; i < values.length; i++) {
+                                            values[0]=""
+                                            values[1]=""
+                                            values[2]="Not Available"
+                                            values[3]="Deficient"
+                                        }
+                                        return value;
+                                    }
                                 },
-                                callback: function (value, index, values) {
-                                    console.log(data)
-                                    return '$' + value;
-                                }
                             },
                             legend: {
                                 display: false
