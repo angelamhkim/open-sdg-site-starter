@@ -93,7 +93,7 @@ menu:
   - path: /faq
     translation_key: menu.faq
   - path: /dashboard
-    translation_key: menu.dashboard
+    translation_key: urban dashboard
 
 
 # Configure the text (or "translation key") to be used on the
