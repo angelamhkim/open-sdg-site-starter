@@ -549,7 +549,16 @@
                 </div>
             </div>
             <div class="row justify-content-center" style="margin-top:40px">
-                
+                <div className="dashboard-menu">
+                    <p><span style="color:red; font-weight:bold; font-size:40px">&#9679;</span>More than 50%
+                        worse</p>
+                    <p><span style="color:yellow;font-weight:bold; font-size:40px">&#9679;</span>More than 50%
+                        has Changed</p>
+                    <p><span style="color:green; font-weight:bold; font-size:40px">&#9679;</span>More than
+                        50% is better</p>
+                    <p><span style="color:grey; font-weight:bold; font-size:40px">&#9679;</span>Exploring Data Sources
+                    </p>
+                </div>
                 <div class="col-xs-12 col-md-4">
                     <h4 style="color:#26BDE2">SDG1: No Poverty</h4>
                     <p>1.2.1 percent below national poverty level<span
@@ -692,13 +701,6 @@
                             style="color:green; font-weight:bold; font-size:25px">&#9679;</span>
                     </p>
                 </div>
-                <div className="dashboard-menu">
-                    <p><span style="color:red; font-weight:bold; font-size:40px">&#9679;</span>Significant challenges remain
-                       <span style="color:yellow;font-weight:bold; font-size:40px">&#9679;</span>Challenges remain
-                       <span style="color:green; font-weight:bold; font-size:40px">&#9679;</span>On track to meet target
-                       <span style="color:grey; font-weight:bold; font-size:40px">&#9679;</span>Not reported
-                    </p>
-                </div>
             </div>
 
             <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
@@ -830,7 +832,8 @@
                             datasets: [
                                 {
                                     backgroundColor: backgroundColorArray,
-                                    data: data
+                                    data: data,
+                                    hoverBackgroundColor: ["#E5243B","#E5243B","#DDA63A","#4C9F38","#4C9F38","#4C9F38","#C5192D","#C5192D","#C5192D","#FF3A21","#FF3A21","#FF3A21","#26BDE2","#26BDE2","#26BDE2","#26BDE2","#26BDE2","#FCC30B","#FCC30B","#A21942","#A21942","#A21942","#FD6925","#FD6925","#DD1367","#DD1367","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#BF8B2E","#56C02B","#00689D","#19486A"]
                                 }
                             ]
                         },
