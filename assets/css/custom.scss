@@ -38,10 +38,20 @@
   display: inline-block;
   overflow-wrap: break-word;
   width:70%;
+  margin-bottom:20px;
+}
+.moreinfo{
+  font-weight: 900;
+  font-size: 15px;
 }
 
 .moreinfo:hover{
 cursor: pointer;
+text-decoration:underline;
+}
+.card-body{
+  color: #585858;
+  margin-bottom: 10px;
 }
 
 
