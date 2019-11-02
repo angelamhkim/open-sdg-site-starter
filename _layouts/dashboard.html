@@ -26,7 +26,7 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#E5243B" />
                         <span style="font-size:20px; color:#E5243B">20.4%</span>
-                        <span style="font-weight:bold;cursor: pointer" data-toggle="collapse" data-target="#1-2-1" aria-expanded="false"
+                        <span style="font-weight:bold" data-toggle="collapse" data-target="#1-2-1" aria-expanded="false"
                             aria-controls="1-2-1">Below National Poverty Level</span>
                         <div id="1-2-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
@@ -833,7 +833,7 @@
                                 {
                                     backgroundColor: backgroundColorArray,
                                     data: data,
-                                    hoverBackgroundColor: ["#E5243B","#E5243B","#DDA63A","#4C9F38","#4C9F38","#4C9F38","#C5192D","#C5192D","#C5192D","#FF3A21","#FF3A21","#FF3A21","#26BDE2","#26BDE2","#26BDE2","#26BDE2","#26BDE2","#FCC30B","#FCC30B","#A21942","#A21942","#A21942","#FD6925","#FD6925","#DD1367","#DD1367","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#FD9D24","#BF8B2E","#56C02B","#00689D","#19486A"]
+                                    hoverBackgroundColor: ["#E5243B", "#E5243B", "#DDA63A", "#4C9F38", "#4C9F38", "#4C9F38", "#C5192D", "#C5192D", "#C5192D", "#FF3A21", "#FF3A21", "#FF3A21", "#26BDE2", "#26BDE2", "#26BDE2", "#26BDE2", "#26BDE2", "#FCC30B", "#FCC30B", "#A21942", "#A21942", "#A21942", "#FD6925", "#FD6925", "#DD1367", "#DD1367", "#FD9D24", "#FD9D24", "#FD9D24", "#FD9D24", "#FD9D24", "#FD9D24", "#FD9D24", "#FD9D24", "#BF8B2E", "#56C02B", "#00689D", "#19486A"]
                                 }
                             ]
                         },
@@ -843,7 +843,13 @@
                                     label: function (tooltipItem, data) {
                                         var datasetLabel = '';
                                         var label = data.labels[tooltipItem.index];
-                                        return label;
+                                        if (data.datasets[0].data[tooltipItem.index] == "-50") {
+                                            return label + ": Deficient"
+                                        } else if (data.datasets[0].data[tooltipItem.index] == "-100") {
+                                            return label + ": N/A"
+                                        } else {
+                                            return label + ": " + data.datasets[0].data[tooltipItem.index]+ "%"
+                                        }
                                     }
                                 }
                             },
@@ -852,12 +858,11 @@
                                     min: -200,
                                     max: 100,
                                     callback: function (value, index, values) {
-                                        console.log(values)
                                         for (let i = 0; i < values.length; i++) {
-                                            values[0]=""
-                                            values[1]=""
-                                            values[2]="Not Available"
-                                            values[3]="Deficient"
+                                            values[0] = ""
+                                            values[1] = ""
+                                            values[2] = "Not Available"
+                                            values[3] = "Deficient"
                                         }
                                         return value;
                                     }
