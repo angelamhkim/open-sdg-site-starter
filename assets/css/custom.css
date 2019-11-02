@@ -22,3 +22,6 @@
   display: inline-block;
   overflow-wrap: break-word;
   width: 70%; }
+
+.moreinfo:hover {
+  cursor: pointer; }
