@@ -7,18 +7,17 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <!-- City Average -->
             <div class="col-md-5">
+                <!-- City Average -->
                 <canvas id="doughnut-chart" width="800" height="450"></canvas>
                 <!-- Reporting Status -->
                 <canvas id="doughnut-chart2" width="800" height="450"></canvas>
-                <!-- 5 Best and 5 Worst -->
             </div>
             <!-- Spider Plot -->
             <div class="col-md-6 offset-1">
                 <canvas id="spiderPlot" width="auto" height="350"></canvas>
             </div>
-            <!-- Progress Bars and Percentage Data For Each SDG -->
+            <!--Percentage/ Dropdown Data For Each SDG -->
             <div class="row justify-content-center" style="margin-top:30px" id="accordion">
                 <div class="col-xs-12 col-md-4" style="display:inline-block;">
                     <img style="height:100px; width:100px; vertical-align:top; margin-bottom:40px;" alt="goal"
@@ -26,8 +25,9 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#E5243B" />
                         <span style="font-size:20px; color:#E5243B">20.4%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#1-2-1" aria-expanded="false"
-                            aria-controls="1-2-1">Below National Poverty Level</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#1-2-1"
+                            aria-expanded="false" aria-controls="1-2-1">Below National Poverty
+                            Level</span>
                         <div id="1-2-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Monitoring national poverty is important for country-specific development agendas.
@@ -42,8 +42,10 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#E5243B">##%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#1-4-1" aria-expanded="false"
-                            aria-controls="1-4-1">of population living in households with access to basic
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#1-4-1"
+                            aria-expanded="false" aria-controls="1-4-1">of population living in
+                            households with access
+                            to basic
                             services</span>
                         <div id="1-4-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
@@ -57,8 +59,8 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#DDA63A" />
                         <span style="font-size:20px; color:#DDA63A">40.2%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#2-1-2" aria-expanded="false"
-                            aria-controls="2-1-2">Food Insecure</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#2-1-2"
+                            aria-expanded="false" aria-controls="2-1-2">Food Insecure</span>
                         <div id="2-1-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Prevalence of moderate or severe food insecurity in the population, based on the Food
@@ -73,8 +75,9 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#4C9F38" />
                         <span style="font-size:20px; color:#4C9F38">11.7</span>
-                        <span data-toggle="collapse" data-target="#3-2-1" aria-expanded="false" aria-controls="3-2-1"
-                            style="font-weight:bold">Under-5 crude death rates per 100,000</span>
+                        <span class="moreinfo" data-toggle="collapse" data-target="#3-2-1" aria-expanded="false"
+                            aria-controls="3-2-1" style="font-weight:bold">Under-5 crude death
+                            rates per 100,000</span>
                         <div id="3-2-1" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="card-body">
                                 The probability of a child born in a specific year or period dying before reaching the
@@ -91,8 +94,10 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#4C9F38">220</span>
-                        <span data-toggle="collapse" data-target="#3-4-1" aria-expanded="false" aria-controls="3-4-1"
-                            style="font-weight:bold">per 100,000 Cardiovascular Disease Mortality</span>
+                        <span class="moreinfo" data-toggle="collapse" data-target="#3-4-1" aria-expanded="false"
+                            aria-controls="3-4-1" style="font-weight:bold">per 100,000
+                            Cardiovascular Disease
+                            Mortality</span>
                         <div id="3-4-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Probability of dying between the ages of 30 and 70 years from cardiovascular diseases,
@@ -105,8 +110,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#4C9F38">245</span>
-                        <span data-toggle="collapse" data-target="#3-6-1" aria-expanded="false" aria-controls="3-6-1"
-                            style="font-weight:bold">Road traffic deaths annually</span>
+                        <span class="moreinfo" data-toggle="collapse" data-target="#3-6-1" aria-expanded="false"
+                            aria-controls="3-6-1" style="font-weight:bold">Road traffic deaths
+                            annually</span>
                         <div id="3-6-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;"> Death rate due to road traffic injuries
                             </div>
@@ -122,8 +128,10 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#C5192D" />
                         <span style="font-size:20px; color:#C5192D">51%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#4-1-1" aria-expanded="false"
-                            aria-controls="4-1-1">Students in 11th Grade not meeting or exceeding standards</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#4-1-1"
+                            aria-expanded="false" aria-controls="4-1-1">Students in 11th Grade not
+                            meeting or exceeding
+                            standards</span>
                         <div id="4-1-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 The California Assessment of Student Performance and Progress (CAASPP) administration
@@ -138,8 +146,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#C5192D">57%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#4-2-2" aria-expanded="false"
-                            aria-controls="4-2-2"> 3 to 4 years olds enrolled in school </span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#4-2-2"
+                            aria-expanded="false" aria-controls="4-2-2"> 3 to 4 years olds enrolled
+                            in school </span>
                         <div id="4-2-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Kindergarten in the US starts at 5 years old. The population ages 3 to 4 years enrolled
@@ -151,8 +160,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#C5192D">##%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#4-5-1" aria-expanded="false"
-                            aria-controls="4-5-1">Gender Parity in Education</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#4-5-1"
+                            aria-expanded="false" aria-controls="4-5-1">Gender Parity in
+                            Education</span>
                         <div id="4-5-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Parity indices (female/male, rural/urban, bottom/top wealth quintile and others such as
@@ -169,8 +179,8 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#FF3A21" />
                         <span style="font-size:20px; color:#FF3A21">17%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#5-2-1" aria-expanded="false"
-                            aria-controls="5-2-1">
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#5-2-1"
+                            aria-expanded="false" aria-controls="5-2-1">
                             of adults have experiences physical or sexual violence
                         </span>
                         <div id="5-2-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -184,8 +194,8 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#FF3A21">11%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#5-5-1" aria-expanded="false"
-                            aria-controls="5-5-1">
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#5-5-1"
+                            aria-expanded="false" aria-controls="5-5-1">
                             of city elected seats are held by women
                         </span>
                         <div id="5-5-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -195,8 +205,8 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#FF3A21">42%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#5-5-2" aria-expanded="false"
-                            aria-controls="5-5-2">
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#5-5-2"
+                            aria-expanded="false" aria-controls="5-5-2">
                             of management occupations are held by women
                         </span>
                         <div id="5-5-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -212,8 +222,9 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#26BDE2" />
                         <span style="font-size:20px; color:#26BDE2">100%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#6-1-1" aria-expanded="false"
-                            aria-controls="6-1-1">Access to Drinking Water</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#6-1-1"
+                            aria-expanded="false" aria-controls="6-1-1">Access to Drinking
+                            Water</span>
                         <div id="6-1-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Proportion of population using safely managed drinking water services
@@ -221,8 +232,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#26BDE2">100%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#6-2-1" aria-expanded="false"
-                            aria-controls="6-2-1">Access to Sanitation Services</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#6-2-1"
+                            aria-expanded="false" aria-controls="6-2-1">Access to Sanitation
+                            Services</span>
                         <div id="6-2-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Proportion of population using safely managed sanitation services, including a
@@ -232,8 +244,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#26BDE2">100%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#6-3-1" aria-expanded="false"
-                            aria-controls="6-3-1">Wastewater safely treated</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#6-3-1"
+                            aria-expanded="false" aria-controls="6-3-1">Wastewater safely
+                            treated</span>
                         <div id="6-3-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Proportion of wastewater safely treated
@@ -241,8 +254,8 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#26BDE2">##%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#6-4-1" aria-expanded="false"
-                            aria-controls="6-4-1">Water Use Efficiency</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#6-4-1"
+                            aria-expanded="false" aria-controls="6-4-1">Water Use Efficiency</span>
                         <div id="6-4-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Change in water-use efficiency over time
@@ -250,8 +263,8 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#26BDE2">##%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#6-4-2" aria-expanded="false"
-                            aria-controls="6-4-2">Level of water stress</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#6-4-2"
+                            aria-expanded="false" aria-controls="6-4-2">Level of water stress</span>
                         <div id="6-4-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Level of water stress: freshwater withdrawal as a proportion of available freshwater
@@ -268,8 +281,8 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#FCC30B" />
                         <span style="font-size:20px; color:#FCC30B">100%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#7-1-1" aria-expanded="false"
-                            aria-controls="7-1-1">Access to Electricity</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#7-1-1"
+                            aria-expanded="false" aria-controls="7-1-1">Access to Electricity</span>
                         <div id="7-1-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Proportion of population with access to electricity
@@ -277,8 +290,10 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#FCC30B">30%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#7-2-1" aria-expanded="false"
-                            aria-controls="7-2-1">Renewable energy share in total energy comsumption</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#7-2-1"
+                            aria-expanded="false" aria-controls="7-2-1">Renewable energy share in
+                            total energy
+                            comsumption</span>
                         <div id="7-2-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Renewable energy share in the total final energy consumption
@@ -292,8 +307,9 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#A21942" />
                         <span style="font-size:20px; color:#A21942">4.75%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#8-1-1" aria-expanded="false"
-                            aria-controls="8-1-1">annual growth rate in GDP per capita</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#8-1-1"
+                            aria-expanded="false" aria-controls="8-1-1">annual growth rate in GDP
+                            per capita</span>
                         <div id="8-1-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Annual growth rate of real GDP per capita
@@ -301,8 +317,8 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#A21942">4.7%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#8-5-2" aria-expanded="false"
-                            aria-controls="8-5-2">Unemployed Rate</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#8-5-2"
+                            aria-expanded="false" aria-controls="8-5-2">Unemployed Rate</span>
                         <div id="8-5-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 The unemployment rate is a useful measure of the underutilization of the labour supply.
@@ -324,8 +340,8 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#A21942">14%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#8-6-1" aria-expanded="false"
-                            aria-controls="8-6-1">Disconnected Youth</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#8-6-1"
+                            aria-expanded="false" aria-controls="8-6-1">Disconnected Youth</span>
                         <div id="8-6-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 This proportion of Disconnected (Opportunity) youth (aged 15-24 years) not in education,
@@ -342,8 +358,10 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#FD6925" />
                         <span style="font-size:20px; color:#FD6925">26</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#9-4-1" aria-expanded="false"
-                            aria-controls="9-4-1">Metric Tons of CO2eq emission per million dollars</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#9-4-1"
+                            aria-expanded="false" aria-controls="9-4-1">Metric Tons of CO2eq
+                            emission per million
+                            dollars</span>
                         <div id="9-4-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Monitoring national poverty is important for country-specific development agendas.
@@ -358,8 +376,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#FD6925">##%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#9-c-1" aria-expanded="false"
-                            aria-controls="9-c-1">Access to Mobile Network</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#9-c-1"
+                            aria-expanded="false" aria-controls="9-c-1">Access to Mobile
+                            Network</span>
                         <div id="9-c-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Proportion of population covered by a mobile network, by technology
@@ -375,8 +394,9 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#DD1367" />
                         <span style="font-size:20px; color:#DD1367">26.7%%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#10-1-1"
-                            aria-expanded="false" aria-controls="10-1-1">People living below 50% of median income (less
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#10-1-1"
+                            aria-expanded="false" aria-controls="10-1-1">People living below 50%
+                            of median income (less
                             than $25,000)</span>
                         <div id="10-1-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
@@ -388,8 +408,9 @@
                         </div>
                         <br />
                         <span style="font-size:20px; color:#DD1367">##%</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#10-3-1"
-                            aria-expanded="false" aria-controls="10-3-1">Experience Discrimination</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#10-3-1"
+                            aria-expanded="false" aria-controls="10-3-1">Experience
+                            Discrimination</span>
                         <div id="10-3-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 Proportion of population reporting having personally felt discriminated against or
@@ -407,7 +428,7 @@
                         <hr class="slash-1" style="color:#FD9D24" />
                         <div class="col-6">
                             <span style="font-size:20px; color:#FD9D24">52,700</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-1-1"
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-1-1"
                                 aria-expanded="false" aria-controls="11-1-1">people experiencing homelessness</span>
                             <div id="11-1-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
@@ -418,7 +439,7 @@
                             </div>
                             <br />
                             <span style="font-size:20px; color:#FD9D24">275M</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-2-1"
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-2-1"
                                 aria-expanded="false" aria-controls="11-2-1">annual bus riders</span>
                             <div id="11-2-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
@@ -430,8 +451,9 @@
                         </div>
                         <div class="col-6">
                             <span style="font-size:20px; color:#FD9D24">100%</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-3-2"
-                                aria-expanded="false" aria-controls="11-3-2"> participation structure in government </span>
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-3-2"
+                                aria-expanded="false" aria-controls="11-3-2"> participation structure in government
+                            </span>
                             <div id="11-3-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
                                     Proportion of cities with a direct participation structure of civil society in urban
@@ -440,34 +462,38 @@
                             </div>
                             <br />
                             <span style="font-size:20px; color:#FD9D24">##</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-5-1"
-                                aria-expanded="false" aria-controls="11-5-1">Number of Deaths and/or Missing Persons Attributed to Disasters</span>
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-5-1"
+                                aria-expanded="false" aria-controls="11-5-1">Number of Deaths and/or Missing Persons
+                                Attributed to Disasters</span>
                             <div id="11-5-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
-                                        Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population (repeat of and 13.1.1)
+                                    Number of deaths, missing persons and directly affected persons attributed to
+                                    disasters per 100,000 population (repeat of and 13.1.1)
                                 </div>
                             </div>
                             <br />
                             <span style="font-size:20px; color:#FD9D24">100%</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-6-1"
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-6-1"
                                 aria-expanded="false" aria-controls="11-6-1">solidwaste collected</span>
                             <div id="11-6-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
-                                        Proportion of urban solid waste regularly collected and with adequate final discharge out of total urban solid waste generated, by cities
+                                    Proportion of urban solid waste regularly collected and with adequate final
+                                    discharge out of total urban solid waste generated, by cities
                                 </div>
                             </div>
                             <br />
                             <span style="font-size:20px; color:#FD9D24">11.3</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-6-2"
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-6-2"
                                 aria-expanded="false" aria-controls="11-6-2">mean levels of PM2.5</span>
                             <div id="11-6-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
-                                    Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)
+                                    Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities
+                                    (population weighted)
                                 </div>
                             </div>
                             <br />
                             <span style="font-size:20px; color:#FD9D24">##</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-7-1"
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-7-1"
                                 aria-expanded="false" aria-controls="11-7-1">Public Open Space</span>
                             <div id="11-7-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
@@ -477,11 +503,12 @@
                             </div>
                             <br />
                             <span style="font-size:20px; color:#FD9D24">##</span>
-                            <span style="font-weight:bold" data-toggle="collapse" data-target="#11-7-2"
+                            <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#11-7-2"
                                 aria-expanded="false" aria-controls="11-7-2">Physical/ Sexual Violence</span>
                             <div id="11-7-2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body" style="margin-bottom:40px;">
-                                    Proportion of persons victim of physical or sexual harassment, by sex, age, disability status and place of occurrence, in the previous 12 months
+                                    Proportion of persons victim of physical or sexual harassment, by sex, age,
+                                    disability status and place of occurrence, in the previous 12 months
                                 </div>
                             </div>
                         </div>
@@ -493,8 +520,9 @@
                     <div class="text-percentages">
                         <hr class="slash-1" style="color:#BF8B2E" />
                         <span style="font-size:20px; color:#BF8B2E">270K</span>
-                        <span style="font-weight:bold" data-toggle="collapse" data-target="#12-5-1"
-                            aria-expanded="false" aria-controls="12-5-1">tons of recyclables collected annually</span>
+                        <span style="font-weight:bold" class="moreinfo" data-toggle="collapse" data-target="#12-5-1"
+                            aria-expanded="false" aria-controls="12-5-1">tons of recyclables
+                            collected annually</span>
                         <div id="12-5-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body" style="margin-bottom:40px;">
                                 National recycling rate, tons of material recycled
@@ -705,7 +733,6 @@
                     </p>
                 </div>
             </div>
-
             <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
             <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -851,7 +878,7 @@
                                         } else if (data.datasets[0].data[tooltipItem.index] == "-100") {
                                             return label + ": N/A"
                                         } else {
-                                            return label + ": " + data.datasets[0].data[tooltipItem.index]+ "%"
+                                            return label + ": " + data.datasets[0].data[tooltipItem.index] + "%"
                                         }
                                     }
                                 }
