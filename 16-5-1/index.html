@@ -118,7 +118,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191105224135">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191105225213">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -126,7 +126,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191105224135"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191105225213"></head>
 <body class="language-en">
 <!-- <div class="container"> -->
 
@@ -233,7 +233,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/16" title="View this goal's indicator list">
-          <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" />
+          <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/16.png" alt=" - Goal 16" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -242,7 +242,7 @@ var translations = {
             <span class="hidden-sm hidden-md hidden-lg">Goal 16: </span>Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels
           </a>
         </h1>
-        <h2>Indicator 16.5.1: Number of persons who had at least one contact with a public official and who paid a bribe to a public official, and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months</h2>
+        <h2>Indicator 16.5.1: Number of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months</h2>
       </div>
     </div>
   </div>
@@ -275,10 +275,17 @@ var translations = {
     </div>
   </div>
 
+  
+  
+
+  
+
   <div class="row" id="indicatorData" data-indicatorid='indicator_16-5-1' data-id="16-5-1" data-country="Central Judicial District of California (Los Angeles)"
-  data-charttitle="Federal Public Corruption Convictions Over the Past Decade" data-measurementunit="Number" data-datasource="United States Department of Justice" data-geographicalarea="Central Judicial District of California (Los Angeles)" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="false">
+  data-charttitle="Federal Public Corruption Convictions Over the Past Decade" data-measurementunit="Number" data-datasource="United States Department of Justice, World Council on City Data" data-copyright=""
+  data-geographicalarea="Central Judicial District of California (Los Angeles)" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="false" data-startvalues="">
     
-    <div class="col-md-3">
+    <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
         <span id="series-help">
           <h4>Sub-categories</h4>
@@ -291,7 +298,7 @@ var translations = {
       </div>
       <div id="units"></div>
     </div>
-    <div class="col-md-9">
+    <div id="indicator-main" class="col-md-9">
     
 
       
@@ -464,13 +471,25 @@ var translations = {
         <div class="async-loaded" style="display:none">
           <ul class="nav nav-tabs data-view" role="tablist">
             <li role="presentation" class="nav-item active">
-              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Chart</a>
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+>Chart</a>
             </li>
             <li role="presentation" class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Table</a>
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+>Table</a>
             </li>
             <li role="presentation" class="nav-item map" style="display:none">
-              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Map</a>
+              <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+>Map</a>
             </li></ul>
 
           <!-- Tab panes -->
@@ -510,15 +529,29 @@ var translations = {
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
+        
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Local Metadata</a>
+            <a class="nav-link" data-toggle="tab" href="#national" aria-controls="national" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to National Metadata tab"
+>Local Metadata</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Global Metadata</a>
+            <a class="nav-link" data-toggle="tab" href="#global" aria-controls="global" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to Global Metadata tab"
+>Global Metadata</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Sources</a>
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to Sources tab"
+>Sources</a>
           </li>
+        
           
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Edit</a>
@@ -528,7 +561,8 @@ var translations = {
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="metadata">
+          
+          <div role="tabpanel" class="tab-pane active" id="national">
             <!-- National Metadata -->
             <div > <!-- formerly class="collapsible expanded" -->
               <!-- <h3 tabindex='0'>National Metadata</h3> -->
@@ -811,7 +845,7 @@ var translations = {
               </article>
             </div>
           </div>
-          <div role="tabpanel" class="tab-pane" id="globalmetadata">
+          <div role="tabpanel" class="tab-pane" id="global">
             <!-- Global Metadata -->
             <div> <!-- formerly <div class="collapsible expanded"> -->
               <!-- <h3 tabindex='0'>Global Metadata</h3> -->
@@ -1529,10 +1563,19 @@ var translations = {
 
           </div>
           
+          
           <div role="tabpanel" class="tab-pane" id="edit">
             <div class="edit-container">
-              <a class="btn btn-primary" href="http://prose.io/#angelamhkim/open-sdg-data-starter/edit/develop/data/indicator_16-5-1.csv">Edit Data</a>
-              <a class="btn btn-primary" href="http://prose.io/#angelamhkim/open-sdg-data-starter/edit/develop/meta/16-5-1.md">Edit Metadata</a>
+              
+
+
+<a class="btn btn-primary" href="http://prose.io/#angelamhkim/open-sdg-data-starter/edit/develop/data/indicator_16-5-1.csv">Edit Data</a>
+
+
+
+<a class="btn btn-primary" href="http://prose.io/#angelamhkim/open-sdg-data-starter/edit/develop/meta/16-5-1.md">Edit Metadata</a>
+
+
             </div>
           </div>
           
@@ -1576,7 +1619,7 @@ var translations = {
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191105224135'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191105225213'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
