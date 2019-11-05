@@ -118,7 +118,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191105191448">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20191105221343">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -126,7 +126,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191105191448"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20191105221343"></head>
 <body class="language-en">
 <!-- <div class="container"> -->
 
@@ -262,7 +262,7 @@ var translations = {
   <div class="row" id="page-content-row">
     <div class="col-xs-12">
       <div id="page-content">
-  
+  <p>Select the following link to download this indicator data in an accessible format:<br /><a href="https://sustainabledevelopment-uk.github.io/sdg-data/data/3-3-3.csv">3.3.3 Malaria incidence per 1,000 population (CSV 95.248 kB)</a></p>
 
 </div>
 
@@ -271,20 +271,113 @@ var translations = {
 
   <div class="row">
     <div class="col-xs-12">
-      <h2>Malaria incidence per 1,000 population</h2>
+      <h2>Malaria incidence in the UK</h2>
     </div>
   </div>
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_3-3-3' data-id="3-3-3" data-country=""
-  data-charttitle="Malaria incidence per 1,000 population" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="false" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  <div class="row" id="indicatorData" data-indicatorid='indicator_3-3-3' data-id="3-3-3" data-country="United Kingdom"
+  data-charttitle="Malaria incidence in the UK" data-measurementunit="Rate per 100,000 population, Number" data-datasource="Public Health England (PHE)" data-geographicalarea="United Kingdom" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="true">
     
-    <div class="col-md-12">
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Sub-categories</h4>
+          <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+        </span>
+        <p>Click on the legend to remove individual lines from the chart.</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/open-sdg-site-starter/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
     
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://angelamhkim.github.io/open-sdg-data-starter/headline/3-3-3.csv" class="btn btn-primary btn-download" download="indicator_3-3-3.csv" tabindex="0" role="button">Download Headline CSV</a>
+
+    <a href="https://angelamhkim.github.io/open-sdg-data-starter/data/3-3-3.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_3-3-3.csv' tabindex='0' role='button'>Download Source CSV</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
 
       
 
       <section>
 
+        
+        <p class="async-loading" data-img="/open-sdg-site-starter/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Chart</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Table</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Map</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/open-sdg-site-starter/assets/img/loading.gif" alt="Loading map" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
         
 
         <!-- Nav tabs -->
@@ -332,12 +425,13 @@ var translations = {
   
   
   
+  
       
       <tr>
         <th scope="row">Indicator available </th>
         <td>
           
-            
+            Malaria incidence per 100,000 population
           
         </td>
         </tr>
@@ -361,7 +455,7 @@ var translations = {
         <th scope="row">Geographical coverage </th>
         <td>
           
-            
+            United Kingdom
           
         </td>
         </tr>
@@ -373,7 +467,7 @@ var translations = {
         <th scope="row">Unit of measurement </th>
         <td>
           
-            
+            Rate per 100,000 population, Number
           
         </td>
         </tr>
@@ -385,7 +479,7 @@ var translations = {
         <th scope="row">Definitions </th>
         <td>
           
-            
+            Incidence of malaria is defined as the number of new cases of malaria per 100,000 people at risk each year.
           
         </td>
         </tr>
@@ -397,7 +491,7 @@ var translations = {
         <th scope="row">Calculations </th>
         <td>
           
-            
+            (New cases of malaria / Population) * 100,000  | (Malaria deaths / Population) * 100,000 | (New cases of malaria by species / Population) * 100,000
           
         </td>
         </tr>
@@ -433,7 +527,7 @@ var translations = {
         <th scope="row">Other information </th>
         <td>
           
-            
+            Data follows the UN specification for this indicator. This indicator has not been identified in collaboration with topic experts.
           
         </td>
         </tr>
@@ -451,8 +545,8 @@ var translations = {
             
 
             
-              <a href="https://github.com/angelamhkim/open-sdg-data-starter/commit/c668a137c13a542f480233edcff3476972c2b897" target="_blank">
-                2018-10-20: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/angelamhkim/open-sdg-data-starter/commit/1205da857f0d5d99d801e3fdbb6b8411fc5f7abc" target="_blank">
+                2019-10-01: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -476,8 +570,8 @@ var translations = {
             
 
             
-              <a href="https://github.com/angelamhkim/open-sdg-data-starter/commit/324e97b64ed9aa4bd1a36d8ec47530a404d87d66" target="_blank">
-                2018-12-05: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/angelamhkim/open-sdg-data-starter/commit/96efd1c8a5e539dcfbe9094f72d343372f50959e" target="_blank">
+                2019-10-01: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -501,7 +595,6 @@ var translations = {
         </tr>
         
       
-  
   
   
   
@@ -624,6 +717,7 @@ var translations = {
         
       
   
+  
       
       <tr>
         <th scope="row">Target name </th>
@@ -665,7 +759,7 @@ var translations = {
         <th scope="row">UN designated tier </th>
         <td>
           
-            1
+            Tier I
           
         </td>
         </tr>
@@ -695,7 +789,7 @@ var translations = {
             
 
             
-              <a href="https://unstats.un.org/sdgs/files/metadata-compilation/Metadata-Goal-3.pdf" target="_blank">
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-03.pdf" target="_blank">
                 United Nations Sustainable Development Goals Metadata (PDF 431 KB) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
@@ -803,7 +897,6 @@ var translations = {
   
   
   
-  
 </table>
 
               </article>
@@ -814,6 +907,494 @@ var translations = {
 
 
 
+
+  <div class="row no-gutters">
+  
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Source 1</h4>
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            Public Health England (PHE)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            Annual
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            2000
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            United Kingdom
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.gov.uk/government/publications/imported-malaria-in-the-uk-statistics" target="_blank">
+                Imported malaria cases and deaths in the UK - 2000 to 2017 <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            06/07/2018
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            TBC
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            Official Statistic
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            enquiries@phe.gov.uk
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Source 2</h4>
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            Office for National Statistics (ONS)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            Annual
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            1898
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            United Kingdom
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland" target="_blank">
+                Population Estimates for UK, England and Wales, Scotland and Northern Ireland <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            28/06/2018
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            01/06/2019
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            National Statistic
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            pop.info@ons.gsi.gov.uk
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
 
 
           </div>
@@ -865,7 +1446,7 @@ var translations = {
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191105191448'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20191105221343'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
