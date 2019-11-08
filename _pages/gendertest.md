@@ -1,5 +1,5 @@
 ---
-title: gendertest
-permalink: /gendertest/
 layout: gendertest
+title: Gender Test
+permalink: /gendertest/
 ---
