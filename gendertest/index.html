@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
-<script>new pym.Child();</script>
-<script>(function() {
+<script>
+  var pymChild = null;
+(function() {
   // If window.HTMLWidgets is already defined, then use it; otherwise create a
   // new object. This allows preceding code to set options that affect the
   // initialization process (though none currently exist).
@@ -841,6 +842,10 @@
 
     return result;
   }
+  if (pymChild) {
+		        pymChild.sendHeight();
+				addShare();
+		    }
 })();
 
 </script>
