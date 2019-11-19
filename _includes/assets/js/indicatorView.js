@@ -446,7 +446,6 @@ var indicatorView = function(model, options) {
   };
 
   this.createPlot = function(chartInfo) {
-    // console.log(chartInfo);
     var that = this;
 
     var chartConfig = {
@@ -520,7 +519,7 @@ var indicatorView = function(model, options) {
               type: "line",
               mode: "horizontal",
               scaleID: "y-axis-0",
-              value: this._model.data[0]["Target Line"],
+              value: this._model.data[0].Value,
               borderColor: "rgb(75, 192, 192)",
               borderWidth: 4,
               label: {
