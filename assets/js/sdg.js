@@ -13,7 +13,6 @@
 {%- include assets/js/indicatorView.js -%}
 {%- include assets/js/indicatorController.js -%}
 {%- include assets/js/search.js -%}
-{%- include assets/js/dashboard.js -%}
 {%- include assets/js/menu.js -%}
 {%- include assets/js/lib/classList.js -%}
 {%- include assets/js/lib/modernizr-custom.js -%}
