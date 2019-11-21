@@ -1,0 +1,50 @@
+{%- include multilingual.html -%}
+{% include head.html %}
+{% include header.html %}
+<div id="main-content" class="container search-results" role="main">
+   <div id='mydiv'>
+        <textarea id="txt"></textarea>
+        <button class='gen_btn'>Download CSV</button>
+    </div>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.js"></script>
+    <script>
+        fetch("https://dawncomer.github.io/open-sdg-data-starter/meta/all.json")
+            .then(response => response.json())
+            .then(function (data) {
+                var metadataArray = Object.values(data);
+                var csv = Papa.unparse(JSON.stringify(metadataArray));
+                document.getElementById("txt").innerHTML = csv;
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+        $(document).ready(function () {
+            $('button').click(function () {
+                fetch("https://dawncomer.github.io/open-sdg-data-starter/meta/all.json")
+                    .then(response => response.json())
+                    .then(function (data) {
+                        var metadataArray = Object.values(data);
+                        var csv = Papa.unparse(JSON.stringify(metadataArray));
+                        var blob = new Blob([csv]);
+                        if (window.navigator.msSaveOrOpenBlob)
+                            window.navigator.msSaveBlob(blob, "SDGmetadata.csv");
+                        else {
+                            var a = window.document.createElement("a");
+                            a.href = window.URL.createObjectURL(blob, { type: "text/plain" });
+                            a.download = "SDGmetadata.csv";
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            });
+        });
+    </script>
+
+{% include footer.html %}
