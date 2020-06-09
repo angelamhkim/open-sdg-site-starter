@@ -1203,7 +1203,7 @@ var mapView = function () {
     });
   };
 };
-var indicatorView = function(model, options) {
+var indicatorView = function (model, options) {
   "use strict";
   console.log(model);
 
@@ -1223,24 +1223,21 @@ var indicatorView = function(model, options) {
 
   $(".plot-container", this._rootElement).css("height", chartHeight + "px");
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     $(view_obj._rootElement)
       .find('a[data-toggle="tab"]')
-      .on("shown.bs.tab", function(e) {
+      .on("shown.bs.tab", function (e) {
         if ($(e.target).attr("href") == "#tableview") {
           setDataTableWidth(
             $(view_obj._rootElement).find("#selectionsTable table")
           );
         } else {
           $($.fn.dataTable.tables(true)).css("width", "100%");
-          $($.fn.dataTable.tables(true))
-            .DataTable()
-            .columns.adjust()
-            .draw();
+          $($.fn.dataTable.tables(true)).DataTable().columns.adjust().draw();
         }
       });
 
-    $(view_obj._legendElement).on("click", "li", function(e) {
+    $(view_obj._legendElement).on("click", "li", function (e) {
       $(this).toggleClass("notshown");
 
       var ci = view_obj._chartInstance,
@@ -1253,7 +1250,7 @@ var indicatorView = function(model, options) {
     });
 
     // Provide the hide/show functionality for the sidebar.
-    $(".data-view .nav-link").on("click", function(e) {
+    $(".data-view .nav-link").on("click", function (e) {
       var $sidebar = $("#indicator-sidebar"),
         $main = $("#indicator-main"),
         hideSidebar = $(this).data("no-disagg"),
@@ -1265,7 +1262,7 @@ var indicatorView = function(model, options) {
         if (mobile.matches) {
           $([document.documentElement, document.body]).animate(
             {
-              scrollTop: $("#indicator-main").offset().top - 40
+              scrollTop: $("#indicator-main").offset().top - 40,
             },
             400
           );
@@ -1277,7 +1274,7 @@ var indicatorView = function(model, options) {
     });
   });
 
-  this._model.onDataComplete.attach(function(sender, args) {
+  this._model.onDataComplete.attach(function (sender, args) {
     if (view_obj._model.showData) {
       $("#dataset-size-warning")[
         args.datasetCountExceedsMax ? "show" : "hide"
@@ -1293,7 +1290,7 @@ var indicatorView = function(model, options) {
     view_obj.createSelectionsTable(args);
   });
 
-  this._model.onNoHeadlineData.attach(function(sender, args) {
+  this._model.onNoHeadlineData.attach(function (sender, args) {
     // Force a unit if necessary.
     if (args && args.forceUnit) {
       $('#units input[type="radio"]')
@@ -1309,7 +1306,7 @@ var indicatorView = function(model, options) {
       _.size(args.minimumFieldSelections)
     ) {
       function getClickFunction(fieldToSelect, fieldValue) {
-        return function() {
+        return function () {
           $('#fields .variable-options input[type="checkbox"]')
             .filter('[data-field="' + fieldToSelect + '"]')
             .filter('[value="' + fieldValue + '"]')
@@ -1325,13 +1322,13 @@ var indicatorView = function(model, options) {
     } else {
       // Fallback behavior - just click on the first one, whatever it is.
       // Also needs to be delayed...
-      setTimeout(function() {
+      setTimeout(function () {
         $("#fields .variable-options :checkbox:eq(0)").trigger("click");
       }, 500);
     }
   });
 
-  this._model.onSeriesComplete.attach(function(sender, args) {
+  this._model.onSeriesComplete.attach(function (sender, args) {
     view_obj.initialiseSeries(args);
 
     if (args.hasGeoData && args.showMap) {
@@ -1340,7 +1337,7 @@ var indicatorView = function(model, options) {
     }
   });
 
-  this._model.onSeriesSelectedChanged.attach(function(sender, args) {
+  this._model.onSeriesSelectedChanged.attach(function (sender, args) {
     // var selector;
     // if (args.series.length === view_obj._fieldLimit) {
     //   selector = $('#fields input:not(:checked)');
@@ -1353,40 +1350,34 @@ var indicatorView = function(model, options) {
     // }
   });
 
-  this._model.onUnitsComplete.attach(function(sender, args) {
+  this._model.onUnitsComplete.attach(function (sender, args) {
     view_obj.initialiseUnits(args);
   });
 
-  this._model.onUnitsSelectedChanged.attach(function(sender, args) {
+  this._model.onUnitsSelectedChanged.attach(function (sender, args) {
     // update the plot's y axis label
     // update the data
   });
 
-  this._model.onFieldsCleared.attach(function(sender, args) {
-    $(view_obj._rootElement)
-      .find(":checkbox")
-      .prop("checked", false);
-    $(view_obj._rootElement)
-      .find("#clear")
-      .addClass("disabled");
+  this._model.onFieldsCleared.attach(function (sender, args) {
+    $(view_obj._rootElement).find(":checkbox").prop("checked", false);
+    $(view_obj._rootElement).find("#clear").addClass("disabled");
 
     // reset available/unavailable fields
     updateWithSelectedFields();
 
     // #246
-    $(view_obj._rootElement)
-      .find(".selected")
-      .css("width", "0");
+    $(view_obj._rootElement).find(".selected").css("width", "0");
     // end of #246
   });
 
-  this._model.onSelectionUpdate.attach(function(sender, args) {
+  this._model.onSelectionUpdate.attach(function (sender, args) {
     $(view_obj._rootElement)
       .find("#clear")
       [args.selectedFields.length ? "removeClass" : "addClass"]("disabled");
 
     // loop through the available fields:
-    $(".variable-selector").each(function(index, element) {
+    $(".variable-selector").each(function (index, element) {
       var currentField = $(element).data("field");
 
       // any info?
@@ -1402,9 +1393,7 @@ var indicatorView = function(model, options) {
           "%"
         : "0";
 
-      $(element)
-        .find(".bar .selected")
-        .css("width", width);
+      $(element).find(".bar .selected").css("width", width);
 
       // is this an allowed field:
       $(element)[
@@ -1415,7 +1404,7 @@ var indicatorView = function(model, options) {
     });
   });
 
-  this._model.onFieldsStatusUpdated.attach(function(sender, args) {
+  this._model.onFieldsStatusUpdated.attach(function (sender, args) {
     //console.log('updating field states with: ', args);
 
     // reset:
@@ -1423,8 +1412,8 @@ var indicatorView = function(model, options) {
       .find("label")
       .removeClass("selected possible excluded");
 
-    _.each(args.data, function(fieldGroup) {
-      _.each(fieldGroup.values, function(fieldItem) {
+    _.each(args.data, function (fieldGroup) {
+      _.each(fieldGroup.values, function (fieldItem) {
         var element = $(view_obj._rootElement).find(
           ':checkbox[value="' +
             fieldItem.value +
@@ -1447,7 +1436,7 @@ var indicatorView = function(model, options) {
       view_obj.sortFieldGroup(fieldGroupElement);
     });
 
-    _.each(args.selectionStates, function(ss) {
+    _.each(args.selectionStates, function (ss) {
       // find the appropriate 'bar'
       var element = $(view_obj._rootElement).find(
         '.variable-selector[data-field="' + ss.field + '"]'
@@ -1464,56 +1453,48 @@ var indicatorView = function(model, options) {
     });
   });
 
-  $(this._rootElement).on("click", "#clear", function() {
+  $(this._rootElement).on("click", "#clear", function () {
     view_obj._model.clearSelectedFields();
   });
 
-  $(this._rootElement).on("click", "#fields label", function(e) {
-    if (
-      !$(this)
-        .closest(".variable-options")
-        .hasClass("disallowed")
-    ) {
-      $(this)
-        .find(":checkbox")
-        .trigger("click");
+  $(this._rootElement).on("click", "#fields label", function (e) {
+    if (!$(this).closest(".variable-options").hasClass("disallowed")) {
+      $(this).find(":checkbox").trigger("click");
     }
 
     e.preventDefault();
     e.stopPropagation();
   });
 
-  $(this._rootElement).on("change", "#units input", function() {
+  $(this._rootElement).on("change", "#units input", function () {
     view_obj._model.updateSelectedUnit($(this).val());
   });
 
   // generic helper function, used by clear all/select all and individual checkbox changes:
-  var updateWithSelectedFields = function() {
+  var updateWithSelectedFields = function () {
     view_obj._model.updateSelectedFields(
       _.chain(
-        _.map($("#fields input:checked"), function(fieldValue) {
+        _.map($("#fields input:checked"), function (fieldValue) {
           return {
             value: $(fieldValue).val(),
-            field: $(fieldValue).data("field")
+            field: $(fieldValue).data("field"),
           };
         })
       )
         .groupBy("field")
-        .map(function(value, key) {
+        .map(function (value, key) {
           return {
             field: key,
-            values: _.pluck(value, "value")
+            values: _.pluck(value, "value"),
           };
         })
         .value()
     );
   };
 
-  $(this._rootElement).on("click", ".variable-options button", function(e) {
+  $(this._rootElement).on("click", ".variable-options button", function (e) {
     var type = $(this).data("type");
-    var $options = $(this)
-      .closest(".variable-options")
-      .find(":checkbox");
+    var $options = $(this).closest(".variable-options").find(":checkbox");
 
     // The clear button can clear all checkboxes.
     if (type == "clear") {
@@ -1533,15 +1514,11 @@ var indicatorView = function(model, options) {
     e.stopPropagation();
   });
 
-  $(this._rootElement).on("click", ":checkbox", function(e) {
+  $(this._rootElement).on("click", ":checkbox", function (e) {
     // don't permit excluded selections:
     if (
-      $(this)
-        .parent()
-        .hasClass("excluded") ||
-      $(this)
-        .closest(".variable-selector")
-        .hasClass("disallowed")
+      $(this).parent().hasClass("excluded") ||
+      $(this).closest(".variable-selector").hasClass("disallowed")
     ) {
       return;
     }
@@ -1551,7 +1528,7 @@ var indicatorView = function(model, options) {
     e.stopPropagation();
   });
 
-  $(this._rootElement).on("click", ".variable-selector", function(e) {
+  $(this._rootElement).on("click", ".variable-selector", function (e) {
     var currentSelector = e.target;
 
     var currentButton = getCurrentButtonFromCurrentSelector(currentSelector);
@@ -1581,7 +1558,7 @@ var indicatorView = function(model, options) {
     }
   }
 
-  this.initialiseSeries = function(args) {
+  this.initialiseSeries = function (args) {
     if (args.series.length) {
       var template = _.template($("#item_template").html());
 
@@ -1597,7 +1574,7 @@ var indicatorView = function(model, options) {
         template({
           series: args.series,
           allowedFields: args.allowedFields,
-          edges: args.edges
+          edges: args.edges,
         })
       );
 
@@ -1607,7 +1584,7 @@ var indicatorView = function(model, options) {
     }
   };
 
-  this.initialiseUnits = function(args) {
+  this.initialiseUnits = function (args) {
     var template = _.template($("#units_template").html()),
       units = args.units || [],
       selectedUnit = args.selectedUnit || null;
@@ -1615,7 +1592,7 @@ var indicatorView = function(model, options) {
     $("#units").html(
       template({
         units: units,
-        selectedUnit: selectedUnit
+        selectedUnit: selectedUnit,
       })
     );
 
@@ -1624,7 +1601,8 @@ var indicatorView = function(model, options) {
     }
   };
 
-  this.updatePlot = function(chartInfo) {
+  this.updatePlot = function (chartInfo) {
+    chartInfo.datasets.push(trendsLine);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
     if (chartInfo.selectedUnit) {
@@ -1632,14 +1610,13 @@ var indicatorView = function(model, options) {
         chartInfo.selectedUnit
       );
     }
-
     // Create a temp object to alter, and then apply. We go to all this trouble
     // to avoid completely replacing view_obj._chartInstance -- and instead we
     // just replace it's properties: "type", "data", and "options".
     var updatedConfig = opensdg.chartConfigAlter({
       type: view_obj._chartInstance.type,
       data: view_obj._chartInstance.data,
-      options: view_obj._chartInstance.options
+      options: view_obj._chartInstance.options,
     });
     view_obj._chartInstance.type = updatedConfig.type;
     view_obj._chartInstance.data = updatedConfig.data;
@@ -1650,7 +1627,47 @@ var indicatorView = function(model, options) {
     $(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
-  this.createPlot = function(chartInfo) {
+  //TRENDS: Linear Regression
+  const datoa = this._model.data.map((x, i) => {
+    return {
+      x: x.Year,
+      y: x.Value,
+    };
+  });
+
+  const clean_data = datoa
+    .filter(({ x, y }) => {
+      return (
+        typeof x === typeof y && // filter out one string & one number
+        !isNaN(x) && // filter out `NaN`
+        !isNaN(y) &&
+        Math.abs(x) !== Infinity &&
+        Math.abs(y) !== Infinity
+      );
+    })
+    .map(({ x, y }) => {
+      return [x, y];
+    });
+
+  const my_regression = regression.linear(clean_data);
+
+  const useful_points = my_regression.points.map(([x, y]) => {
+    return y;
+  });
+
+  const trendsLine = {
+    label: "Trends Line",
+    data: useful_points,
+    type: "line",
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+    borderColor: "rgba(0, 0, 0, 0.1)",
+  };
+
+  //END TRENDS: Linear Regression
+
+  this.createPlot = function (chartInfo) {
+    chartInfo.datasets.push(trendsLine);
+
     var that = this;
 
     var chartConfig = {
@@ -1669,14 +1686,14 @@ var indicatorView = function(model, options) {
             {
               maxBarThickness: 150,
               gridLines: {
-                color: "#ddd"
-              }
-            }
+                color: "#ddd",
+              },
+            },
           ],
           yAxes: [
             {
               ticks: {
-                suggestedMin: 0
+                suggestedMin: 0,
               },
               scaleLabel: {
                 display: this._model.selectedUnit
@@ -1684,15 +1701,15 @@ var indicatorView = function(model, options) {
                   : this._model.measurementUnit,
                 labelString: this._model.selectedUnit
                   ? translations.t(this._model.selectedUnit)
-                  : this._model.measurementUnit
-              }
-            }
-          ]
+                  : this._model.measurementUnit,
+              },
+            },
+          ],
         },
-        legendCallback: function(chart) {
+        legendCallback: function (chart) {
           var text = ['<ul id="legend">'];
 
-          _.each(chart.data.datasets, function(dataset, datasetIndex) {
+          _.each(chart.data.datasets, function (dataset, datasetIndex) {
             text.push('<li data-datasetindex="' + datasetIndex + '">');
             text.push(
               '<span class="swatch' +
@@ -1710,13 +1727,13 @@ var indicatorView = function(model, options) {
           return text.join("");
         },
         legend: {
-          display: false
+          display: false,
         },
         title: {
-          display: false
+          display: false,
         },
         plugins: {
-          scaler: {}
+          scaler: {},
         },
         annotation: {
           annotations: [
@@ -1726,15 +1743,16 @@ var indicatorView = function(model, options) {
               scaleID: "y-axis-0",
               value: this._model.data[0].Value,
               borderColor: "rgb(75, 192, 192)",
+              borderDash: [10, 5],
               borderWidth: 4,
               label: {
-                enabled: false,
-                content: "Test label"
-              }
-            }
-          ]
-        }
-      }
+                enabled: true,
+                content: "2030 Goal",
+              },
+            },
+          ],
+        },
+      },
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
 
@@ -1744,7 +1762,7 @@ var indicatorView = function(model, options) {
     );
 
     Chart.pluginService.register({
-      afterDraw: function(chart) {
+      afterDraw: function (chart) {
         var $canvas = $(that._rootElement).find("canvas"),
           font = "12px Arial",
           canvas = $canvas.get(0),
@@ -1755,7 +1773,7 @@ var indicatorView = function(model, options) {
         ctx.textAlign = "left";
         ctx.textBaseline = "middle";
         ctx.fillStyle = "#6e6e6e";
-      }
+      },
     });
 
     this.createTableFooter(
@@ -1771,7 +1789,7 @@ var indicatorView = function(model, options) {
     );
     this.createSourceButton(chartInfo.shortIndicatorId, "#selectionsChart");
 
-    $("#btnSave").click(function() {
+    $("#btnSave").click(function () {
       var filename = chartInfo.indicatorId + ".png",
         element = document.getElementById("chart-canvas"),
         height = element.clientHeight + 25,
@@ -1787,12 +1805,12 @@ var indicatorView = function(model, options) {
         scrollX: 0,
         scrollY: 0,
         // Allow a chance to alter the screenshot's HTML.
-        onclone: function(clone) {
+        onclone: function (clone) {
           // Add a body class so that the screenshot style can be custom.
           clone.body.classList.add("image-download-in-progress");
         },
         // Decide which elements to skip.
-        ignoreElements: function(el) {
+        ignoreElements: function (el) {
           // Keep all style, head, and link elements.
           var keepTags = ["STYLE", "HEAD", "LINK"];
           if (keepTags.indexOf(el.tagName) !== -1) {
@@ -1805,12 +1823,12 @@ var indicatorView = function(model, options) {
           }
           // Leave out everything else.
           return true;
-        }
+        },
       };
       // First convert the target to a canvas.
-      html2canvas(element, options).then(function(canvas) {
+      html2canvas(element, options).then(function (canvas) {
         // Then download that canvas as a PNG file.
-        canvas.toBlob(function(blob) {
+        canvas.toBlob(function (blob) {
           saveAs(blob, filename);
         });
       });
@@ -1819,18 +1837,18 @@ var indicatorView = function(model, options) {
     $(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
-  this.toCsv = function(tableData) {
+  this.toCsv = function (tableData) {
     var lines = [],
-      headings = _.map(tableData.headings, function(heading) {
+      headings = _.map(tableData.headings, function (heading) {
         return '"' + translations.t(heading) + '"';
       });
 
     lines.push(headings.join(","));
 
-    _.each(tableData.data, function(dataValues) {
+    _.each(tableData.data, function (dataValues) {
       var line = [];
 
-      _.each(headings, function(heading, index) {
+      _.each(headings, function (heading, index) {
         line.push(dataValues[index]);
       });
 
@@ -1840,8 +1858,8 @@ var indicatorView = function(model, options) {
     return lines.join("\n");
   };
 
-  var setDataTableWidth = function(table) {
-    table.find("thead th").each(function() {
+  var setDataTableWidth = function (table) {
+    table.find("thead th").each(function () {
       var textLength = $(this).text().length;
       for (var loop = 0; loop < view_obj._tableColumnDefs.length; loop++) {
         var def = view_obj._tableColumnDefs[loop];
@@ -1860,7 +1878,7 @@ var indicatorView = function(model, options) {
     table.removeAttr("style width");
 
     var totalWidth = 0;
-    table.find("thead th").each(function() {
+    table.find("thead th").each(function () {
       if ($(this).data("width")) {
         totalWidth += $(this).data("width");
       } else {
@@ -1878,14 +1896,14 @@ var indicatorView = function(model, options) {
     }
   };
 
-  var initialiseDataTable = function(el) {
+  var initialiseDataTable = function (el) {
     var datatables_options = options.datatables_options || {
         paging: false,
         bInfo: false,
         bAutoWidth: false,
         searching: false,
         responsive: false,
-        order: [[0, "asc"]]
+        order: [[0, "asc"]],
       },
       table = $(el).find("table");
 
@@ -1896,7 +1914,7 @@ var indicatorView = function(model, options) {
     setDataTableWidth(table);
   };
 
-  this.createSelectionsTable = function(chartInfo) {
+  this.createSelectionsTable = function (chartInfo) {
     this.createTable(
       chartInfo.selectionsTable,
       chartInfo.indicatorId,
@@ -1917,7 +1935,7 @@ var indicatorView = function(model, options) {
     this.createSourceButton(chartInfo.shortIndicatorId, "#selectionsTable");
   };
 
-  this.createDownloadButton = function(table, name, indicatorId, el) {
+  this.createDownloadButton = function (table, name, indicatorId, el) {
     if (window.Modernizr.blobconstructor) {
       var downloadKey = "download_csv";
       if (name == "Chart") {
@@ -1942,13 +1960,13 @@ var indicatorView = function(model, options) {
           .attr({
             href: URL.createObjectURL(
               new Blob([this.toCsv(table)], {
-                type: "text/csv"
+                type: "text/csv",
               })
             ),
             download: indicatorId + ".csv",
             title: translations.indicator.download_csv_title,
             class: "btn btn-primary btn-download",
-            tabindex: 0
+            tabindex: 0,
           })
           .data("csvdata", this.toCsv(table))
       );
@@ -1972,13 +1990,13 @@ var indicatorView = function(model, options) {
             download: headlineId + ".csv",
             title: translations.indicator.download_headline_title,
             class: "btn btn-primary btn-download",
-            tabindex: 0
+            tabindex: 0,
           })
       );
     }
   };
 
-  this.createSourceButton = function(indicatorId, el) {
+  this.createSourceButton = function (indicatorId, el) {
     var gaLabel = "Download Source CSV: " + indicatorId;
     $(el).append(
       $("<a />")
@@ -1996,19 +2014,19 @@ var indicatorView = function(model, options) {
           download: indicatorId + ".csv",
           title: translations.indicator.download_source_title,
           class: "btn btn-primary btn-download",
-          tabindex: 0
+          tabindex: 0,
         })
     );
   };
 
-  this.createTable = function(table, indicatorId, el) {
+  this.createTable = function (table, indicatorId, el) {
     options = options || {};
     var that = this,
       csv_path = options.csv_path,
       allow_download = options.allow_download || false,
       csv_options = options.csv_options || {
         separator: ",",
-        delimiter: '"'
+        delimiter: '"',
       },
       table_class = options.table_class || "table table-hover";
 
@@ -2018,7 +2036,7 @@ var indicatorView = function(model, options) {
     if (table && table.data.length) {
       var currentTable = $("<table />").attr({
         class: /*'table-responsive ' +*/ table_class,
-        width: "100%"
+        width: "100%",
         //'id': currentId
       });
 
@@ -2026,7 +2044,7 @@ var indicatorView = function(model, options) {
 
       var table_head = "<thead><tr>";
 
-      var getHeading = function(heading, index) {
+      var getHeading = function (heading, index) {
         var span = '<span class="sort" />';
         var span_heading = "<span>" + translations.t(heading) + "</span>";
         return !index || heading.toLowerCase() == "units"
@@ -2034,7 +2052,7 @@ var indicatorView = function(model, options) {
           : span + span_heading;
       };
 
-      table.headings.forEach(function(heading, index) {
+      table.headings.forEach(function (heading, index) {
         table_head +=
           "<th" +
           (!index || heading.toLowerCase() == "units"
@@ -2049,9 +2067,9 @@ var indicatorView = function(model, options) {
       currentTable.append(table_head);
       currentTable.append("<tbody></tbody>");
 
-      table.data.forEach(function(data) {
+      table.data.forEach(function (data) {
         var row_html = "<tr>";
-        table.headings.forEach(function(heading, index) {
+        table.headings.forEach(function (heading, index) {
           // For accessibility set the Year column to a "row" scope th.
           var isYear = index == 0 || heading.toLowerCase() == "year";
           var isUnits = heading.toLowerCase() == "units";
@@ -2077,21 +2095,21 @@ var indicatorView = function(model, options) {
     }
   };
 
-  this.createTableFooter = function(divid, footerFields, el) {
+  this.createTableFooter = function (divid, footerFields, el) {
     var footdiv = $("<div />").attr({
       id: divid,
-      class: "table-footer-text"
+      class: "table-footer-text",
     });
 
-    _.each(footerFields, function(val, key) {
+    _.each(footerFields, function (val, key) {
       footdiv.append($("<p />").text(key + ": " + val));
     });
 
     $(el).append(footdiv);
   };
 
-  this.sortFieldGroup = function(fieldGroupElement) {
-    var sortLabels = function(a, b) {
+  this.sortFieldGroup = function (fieldGroupElement) {
+    var sortLabels = function (a, b) {
       var aObj = { hasData: $(a).attr("data-has-data"), text: $(a).text() };
       var bObj = { hasData: $(b).attr("data-has-data"), text: $(b).text() };
       if (aObj.hasData == bObj.hasData) {
