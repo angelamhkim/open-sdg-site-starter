@@ -1,6 +1,5 @@
 var indicatorView = function (model, options) {
-  "use strict";
-  console.log(model);
+  ("use strict");
 
   var view_obj = this;
   this._model = model;
@@ -397,7 +396,6 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function (chartInfo) {
-    chartInfo.datasets.push(trendsLine);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
     if (chartInfo.selectedUnit) {
@@ -413,9 +411,14 @@ var indicatorView = function (model, options) {
       data: view_obj._chartInstance.data,
       options: view_obj._chartInstance.options,
     });
+
     view_obj._chartInstance.type = updatedConfig.type;
     view_obj._chartInstance.data = updatedConfig.data;
     view_obj._chartInstance.options = updatedConfig.options;
+
+    //Linear Regression Update
+    chartInfo.datasets.push(linearRegression(view_obj._chartInstance.data));
+    //End Linear Regression Update
 
     view_obj._chartInstance.update(1000, true);
 
@@ -423,51 +426,110 @@ var indicatorView = function (model, options) {
   };
 
   //TRENDS: Linear Regression
-  const datoa = this._model.data.map((x, i) => {
-    return {
-      x: x.Year,
-      y: x.Value,
-    };
-  });
-
-  const clean_data = datoa
-    .filter(({ x, y }) => {
-      return (
-        typeof x === typeof y && // filter out one string & one number
-        !isNaN(x) && // filter out `NaN`
-        !isNaN(y) &&
-        Math.abs(x) !== Infinity &&
-        Math.abs(y) !== Infinity
-      );
-    })
-    .map(({ x, y }) => {
-      return [x, y];
+  function linearRegression(chartInfo) {
+    const years = chartInfo.labels.map((x, i) => {
+      return x;
     });
 
-  const my_regression = regression.linear(clean_data);
+    const dataPoints = [];
+    chartInfo.datasets.map((y, i) => {
+      y.data.map((z) => {
+        dataPoints.push(z);
+      });
+    });
 
-  const useful_points = my_regression.points.map(([x, y]) => {
-    return y;
-  });
+    function repeatFor(years, dataPoints) {
+      var newArr = new Array(dataPoints.length);
 
-  const trendsLine = {
-    label: "Trends Line",
-    data: useful_points,
-    type: "line",
-    backgroundColor: "rgba(0, 0, 0, 0.1)",
-    borderColor: "rgba(0, 0, 0, 0.1)",
-  };
+      for (var i = 0; i < dataPoints.length; i++) {
+        newArr[i] = years[i % years.length];
+      }
+      return newArr;
+    }
+    var yearsUpdate = repeatFor(years, dataPoints);
+
+    let datoa = yearsUpdate.map(function (v, k, a) {
+      return { x: v, y: dataPoints[k] };
+    });
+
+    const clean_data = datoa
+      .filter(({ x, y }) => {
+        return (
+          typeof x === typeof y && // filter out one string & one number
+          !isNaN(x) && // filter out `NaN`
+          !isNaN(y) &&
+          Math.abs(x) !== Infinity &&
+          Math.abs(y) !== Infinity
+        );
+      })
+      .map(({ x, y }) => {
+        return [x, y];
+      });
+
+    const my_regression = regression.linear(clean_data);
+
+    const useful_points = my_regression.points.map(([x, y]) => {
+      return y;
+    });
+
+    const trendsLine = {
+      label: "Trends Line",
+      data: useful_points,
+      type: "line",
+      borderColor: "rgb(255,99,132)",
+      bakgroundColor: "rgb(255,226,231)",
+    };
+
+    return trendsLine;
+  }
 
   //END TRENDS: Linear Regression
 
+  //GET NATIONAL DATA
+
+  function getNationalData(chartInfo) {
+    console.log(chartInfo);
+    $.get(
+      `https://GSA.github.io/sdg-data-usa/data/${chartInfo.shortIndicatorId}.json`,
+      function (data, status) {
+        let years = [...new Set(data.Year)];
+
+        let unique = years.concat(chartInfo.labels);
+        unique = unique.map((item, i) =>
+          unique.includes(item, i + 1) ? item : ""
+        );
+        unique = [...new Set(unique)].filter((n) => n);
+
+        let yearIndex = unique.map((year) => {
+          return data.Year.indexOf(year);
+        });
+        console.log("yearsindex", yearIndex);
+
+        const nationalPoints = yearIndex.map((x) => {
+          return data.Value[x];
+        });
+
+        const nationalPlot = {
+          label: "National Statistics",
+          backgroundColor: "rgb(54,162,235)",
+          data: nationalPoints,
+        };
+        chartInfo.datasets.push(nationalPlot);
+        view_obj._chartInstance.update(1000, true);
+      }
+    );
+  }
+
+  //END NATIONAL DATA
+
   this.createPlot = function (chartInfo) {
-    chartInfo.datasets.push(trendsLine);
+    chartInfo.datasets.push(linearRegression(chartInfo));
+    getNationalData(chartInfo);
 
     var that = this;
 
     var chartConfig = {
       type: this._model.graphType,
-      // plugins: [ChartAnnotation],
       data: chartInfo,
       options: {
         responsive: true,
