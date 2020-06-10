@@ -1623,6 +1623,7 @@ var indicatorView = function (model, options) {
 
     //Linear Regression Update
     chartInfo.datasets.push(linearRegression(view_obj._chartInstance.data));
+    console.log(view_obj._chartInstance.data);
     //End Linear Regression Update
 
     view_obj._chartInstance.update(1000, true);
@@ -1672,6 +1673,7 @@ var indicatorView = function (model, options) {
       });
 
     const my_regression = regression.linear(clean_data);
+    console.log("Linear Regression Equation:", my_regression);
 
     const useful_points = my_regression.points.map(([x, y]) => {
       return y;
@@ -1682,7 +1684,8 @@ var indicatorView = function (model, options) {
       data: useful_points,
       type: "line",
       borderColor: "rgb(255,99,132)",
-      bakgroundColor: "rgb(255,226,231)",
+      backgroundColor: "rgb(255,99,132)",
+      fill: false,
     };
 
     return trendsLine;
@@ -1693,10 +1696,10 @@ var indicatorView = function (model, options) {
   //GET NATIONAL DATA
 
   function getNationalData(chartInfo) {
-    console.log(chartInfo);
     $.get(
       `https://GSA.github.io/sdg-data-usa/data/${chartInfo.shortIndicatorId}.json`,
       function (data, status) {
+        console.log("National Data:", data);
         let years = [...new Set(data.Year)];
 
         let unique = years.concat(chartInfo.labels);
@@ -1708,7 +1711,6 @@ var indicatorView = function (model, options) {
         let yearIndex = unique.map((year) => {
           return data.Year.indexOf(year);
         });
-        console.log("yearsindex", yearIndex);
 
         const nationalPoints = yearIndex.map((x) => {
           return data.Value[x];
@@ -1724,8 +1726,16 @@ var indicatorView = function (model, options) {
       }
     );
   }
-
   //END NATIONAL DATA
+  
+  //GOAL LINE
+  function getGoal(chartInfo) {
+    var goal;
+ 
+    console.log(chartInfo);
+  }
+
+  //END GOAL LINE
 
   this.createPlot = function (chartInfo) {
     chartInfo.datasets.push(linearRegression(chartInfo));
