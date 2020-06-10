@@ -420,6 +420,7 @@ var indicatorView = function (model, options) {
     chartInfo.datasets.push(linearRegression(view_obj._chartInstance.data));
     console.log(view_obj._chartInstance.data);
     //End Linear Regression Update
+    getNationalData(chartInfo);
 
     view_obj._chartInstance.update(1000, true);
 
@@ -522,18 +523,31 @@ var indicatorView = function (model, options) {
     );
   }
   //END NATIONAL DATA
-  
+
   //GOAL LINE
   function getGoal(chartInfo) {
-    var goal;
- 
-    console.log(chartInfo);
+    const index = chartInfo.labels.indexOf(2030);
+    const goalPoint = chartInfo.datasets[0].data[index];
+    remove2030(chartInfo);
+    return goalPoint;
   }
 
+  function remove2030(chartInfo) {
+    chartInfo.labels.map((x, i) => {
+      const index = chartInfo.labels.indexOf(x);
+      if (x === 2030) {
+        chartInfo.labels.splice(index, 1);
+        chartInfo.datasets.map((point) => {
+          point.data.splice(index, 1);
+        });
+      }
+    });
+  }
   //END GOAL LINE
 
   this.createPlot = function (chartInfo) {
     chartInfo.datasets.push(linearRegression(chartInfo));
+    // chartInfo.datasets.push(getGoal(chartInfo));
     getNationalData(chartInfo);
 
     var that = this;
@@ -608,13 +622,14 @@ var indicatorView = function (model, options) {
               type: "line",
               mode: "horizontal",
               scaleID: "y-axis-0",
-              value: this._model.data[0].Value,
+              value: getGoal(chartInfo),
               borderColor: "rgb(75, 192, 192)",
               borderDash: [10, 5],
               borderWidth: 4,
               label: {
                 enabled: true,
                 content: "2030 Goal",
+                position: "right",
               },
             },
           ],
