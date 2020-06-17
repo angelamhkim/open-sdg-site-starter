@@ -451,6 +451,11 @@ var indicatorView = function (model, options) {
     var yearsUpdate = repeatFor(years, dataPoints);
 
     let datoa = yearsUpdate.map(function (v, k, a) {
+      if (typeof v === "string") {
+        v = parseInt(v.substring(0, 4));
+      } else {
+        v = v;
+      }
       return { x: v, y: dataPoints[k] };
     });
 
@@ -529,6 +534,7 @@ var indicatorView = function (model, options) {
     const index = chartInfo.labels.indexOf(2030);
     const goalPoint = chartInfo.datasets[0].data[index];
     remove2030(chartInfo);
+    console.log("Goal Point:", goalPoint);
     return goalPoint;
   }
 
@@ -546,6 +552,7 @@ var indicatorView = function (model, options) {
   //END GOAL LINE
 
   this.createPlot = function (chartInfo) {
+    console.log(chartInfo);
     chartInfo.datasets.push(linearRegression(chartInfo));
     // chartInfo.datasets.push(getGoal(chartInfo));
     getNationalData(chartInfo);
