@@ -480,9 +480,11 @@ var indicatorView = function (model, options) {
       return y;
     });
 
+    const trendsPoints = Array.from(new Set(useful_points));
+
     const trendsLine = {
       label: "Trends Line",
-      data: useful_points,
+      data: trendsPoints,
       type: "line",
       borderColor: "rgb(255,99,132)",
       backgroundColor: "rgb(255,99,132)",
