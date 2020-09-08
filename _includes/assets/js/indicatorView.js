@@ -555,7 +555,6 @@ var indicatorView = function (model, options) {
 
   this.createPlot = function (chartInfo) {
     console.log(chartInfo);
-    chartInfo.datasets.push(linearRegression(chartInfo));
     // chartInfo.datasets.push(getGoal(chartInfo));
     getNationalData(chartInfo);
 
